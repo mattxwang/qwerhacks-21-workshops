@@ -4,6 +4,14 @@ The goal of this short README and video is to answer a seemingly simple question
 
 For this mini-workshop, **you do not need to know any React**, and really, **you probably don't even need to know how to code**! Everyone is welcome.
 
+## Table of Contents
+
+* [What is React?](#what-is-react)
+* [Why does React exist?](#why-does-react-exist)
+* [What could I use instead of React?](#what-could-i-use-instead-of-react)
+* [So ... should I use it?](#so--should-i-use-it)
+* [Wrapping Up](#wrapping-up)
+* [Resources &amp; Attributions](#resources--attributions)
 ## What is React?
 
 React is a **JavaScript library** used to **build user interfaces**. It is **declarative**, **component-based**, and **"learn once, write anywhere"**.
