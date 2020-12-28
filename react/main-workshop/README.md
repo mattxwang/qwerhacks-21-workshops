@@ -56,6 +56,8 @@ You should get a screen like this:
 
 TODO IMAGE
 
+And we're ready. Let's get started!
+
 ### Hello World
 
 As is customary, let's write a hello world message! The splash tells us to edit `src/App.js`, so let's do that!
@@ -264,7 +266,167 @@ Wow, nice! We've made our very first, simple component. As a quick recap, we cov
 * importing and using a component
 * accessing the properties of a component
 
+**Checkpoint #1**: TODO.
 ## Hooks and State in React
+
+Note: *this will continue from the previous section. Not sure what code you should have? Check out checkpoint #1 TODO*
+
+Okay, so we've got a wireframe going - but it's not interactive yet. Luckily, creating interactivity in your app is what React is really good at!
+
+For a toy example, let's create a like/upvote button for our Tweet. Heading to `src/components/Tweet.js`, let's first create a simple button:
+
+```jsx
+// src/components/Tweet.js
+
+function Tweet(props) {
+  return (
+    <div>
+      <p>
+        {props.author} says: {props.body}
+      </p>
+      <p>
+        number of likes: 42
+      </p>
+      <button>+1!</button>
+    </div>
+  );
+}
+
+export default Tweet;
+```
+
+Maybe not the most accurate-looking Twitter clone, but it works out functionality-wise. Before we actually write our code, let's think about what we want to happen here:
+
+* there should probably be a variable, maybe `likes`, that keeps track of how many likes our tweet has
+* when we click the +1 button, we should update this variable
+* and importantly, **every time the variable is updated, the component should be rerendered**
+
+That last tidbit is one of the trickiest parts of web development. React elegantly solves this problem with something called **state**. Using **state** (and the "state **hook**"), we'll tell React which variables impact the rendering of our app; React will keep track of changes to the variable, and update it when needed. How convenient!
+
+Let's take our Hook for a spin. First, we need to import the `useState` hook:
+
+```jsx
+// src/components/Tweet.js
+
+import { useState } from 'react';
+
+function Tweet(props) {
+  return (
+    <div>
+      <p>
+        {props.author} says: {props.body}
+      </p>
+      <p>
+        number of likes: 42
+      </p>
+      <button>+1!</button>
+    </div>
+  );
+}
+
+export default Tweet;
+```
+
+Don't forget the braces! If you're curious, this is [object destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring), but it's not too important to understand the syntax.
+
+Now, we're going to use it:
+
+```jsx
+// src/components/Tweet.js
+
+import { useState } from 'react';
+
+function Tweet(props) {
+  const [likes, setLikes] = useState(0);
+  return (
+    <div>
+      <p>
+        {props.author} says: {props.body}
+      </p>
+      <p>
+        number of likes: 42
+      </p>
+      <button>+1!</button>
+    </div>
+  );
+}
+
+export default Tweet;
+```
+
+Hm, what's going on in this line? First, let's note that we're calling `useState`: it's a function! The argument that we're passing in is the *default* value for that state variable. I think `0` is a good default for a number of likes.
+
+What does `useState` return, and what is that syntax there? This is called [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), and we're basically saying:
+
+* `useState` returns an array
+* for the first item in the array it returns, assign the name `likes` to it. `likes` will be the **current value of the state variable**.
+* for the second item, assign the name `setLikes` to it. `setLikes` is a **function we use to update the state variable**.
+
+Technically, you can name these variables whatever you want (this is the benefit of destructuring), but we'll name it this way out of convention.
+
+Okay, so let's use these now and sketch out what we wanted.
+
+```jsx
+// src/components/Tweet.js
+
+function Tweet(props) {
+  const [likes, setLikes] = useState(0);
+  const addLike = () => setLikes(likes + 1);
+  return (
+    <div>
+      <p>
+        {props.author} says: {props.body}
+      </p>
+      <p>
+        number of likes: {likes}
+      </p>
+      <button>+1!</button>
+    </div>
+  );
+}
+```
+
+Here, `addLike` is an *arrow function* that calls `setLikes` with an incremented value; nothing too spicy. But when do we actually call `addLike`?
+
+In typical HTML, `<button>` has a property called `onclick` that lets you pass a function to call. In React, there is a *very similar* property called `onClick` that does the same thing. So, let's just pass it `addLike`!
+
+```jsx
+// src/components/Tweet.js
+
+function Tweet(props) {
+  const [likes, setLikes] = useState(0);
+  const addLike = () => setLikes(likes + 1);
+  return (
+    <div>
+      <p>
+        {props.author} says: {props.body}
+      </p>
+      <p>
+        number of likes: {likes}
+      </p>
+      <button onClick={addLike}>+1!</button>
+    </div>
+  );
+}
+```
+
+Note that we didn't pass in `addLike()` - that would be *calling the function*, not *passing the function itself*. This is a tricky but important distinction.
+
+And voila! Things are working! Notice that *every time* we click the button, the number goes up without fail. Nice!
+
+TODO GIF
+
+You might think that this is a bit confusing to update one button, and that'd be correct! But, we'll find that React makes building complex apps much easier; something we'll explore in the next section!
+
+As a quick recap, here's what we covered:
+
+* what the `useState` function's arguments and return values are
+* how to use the return values from `useState`
+* combining the `useState` hook with `onClick`
+
+Lost on the code? Check out the checkpoint:
+
+**Checkpoint 2:** TODO
 
 ## Common React Patterns: Lists, Forms, and Conditional Rendering
 
