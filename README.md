@@ -5,6 +5,7 @@
 ## Workshop Legend
 
 This repository has a lot of stuff going on! For your convenience, here are all of the workshop materials, divided up by topic.
+
 ### React
 
 The "actual" workshop; this is what you need to get your project up and running, and learn the basics of React!
@@ -14,7 +15,7 @@ The "actual" workshop; this is what you need to get your project up and running,
 2. Creating Your First Component
 3. Hooks and State in React
 4. Common React Patterns: Lists, Forms, and Conditional Rendering
-5. Using GitHub and Netlify to deploy your app for free
+5. Using GitHub and Netlify to Deploy Your App For Free
 
 Some bonus content! Feel free to check these out if they interest you, but you might not need them for your project.
 
@@ -59,6 +60,7 @@ Good question! Luckily for us, the internet has tons of great resources, includi
 * skimming other tutorials: [React has a great official tutorial](https://reactjs.org/tutorial/tutorial.html), and [Firebase's](https://firebase.google.com/docs/web/setup) is alright too. [Tania Rascia has a great React tutorial too](https://www.taniarascia.com/getting-started-with-react/)!
 * use [StackOverflow](https://stackoverflow.com/)! There's no shame, and it's likely that many others have run into your problem too!
 * ask us! QWER Hacks has a mentor system; more info TBD.
+
 ## Resources and Thanks
 
 [Matt](https://matthewwang.me) has taught a few variants of these workshops before; past iterations include:
@@ -70,9 +72,10 @@ Good question! Luckily for us, the internet has tons of great resources, includi
 * [Learning Lab Crash Course: Misc DevOps](https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/14-misc-devops)
 * [Learning Lab Crash Course: Intro to Firebase](https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/18-firebase)
 
-He'd also like to thank ACM Hack for Hackschool, which covers many intro to web development topics; he borrowed the BTS Twitter photos used in "[Should I use React in my hackathon project?](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/should-i-use-react)" from their [Hackschool 2020, Intro to React Workshop](https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/07-intro-react).
+He'd also like to thank ACM Hack for Hackschool, which covers many intro to web development topics; he borrowed the BTS Twitter photos used in "[Should I use React in my hackathon project?](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/should-i-use-react)" from their [Hackschool 2020, Intro to React Workshop](https://github.com/uclaacm/hackschool-f20/tree/main/session-7-intro-react).
+
 ## Licensing
 
-The contents of this workshop (like the rest of this repository) are dual-licensed under the [MIT License](https://github.com/malsf21/qwerhacks-21-workshops/blob/main/LICENSE) and the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/); feel free to use whichever license suits your purpose better.
+The contents of this repository are dual-licensed under the [MIT License](https://github.com/malsf21/qwerhacks-21-workshops/blob/main/LICENSE) and the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/); feel free to use whichever license suits your purpose better.
 
 I'd love to hear if you found this helpful, or if you have any suggestions! Please send me an email at [matt@matthewwang.me](mailto:matt@matthewwang.me).
