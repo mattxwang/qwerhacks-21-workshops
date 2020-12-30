@@ -46,7 +46,7 @@ For both the React and Firestore workshops, I do assume that you've seen *a litt
 
 If you haven't used HTML and CSS before, it's not the worst deal in the world, but we'd recommend that you brush up on those first! Check out Interneting Is Hard's [Basic Web Pages](https://www.internetingishard.com/html-and-css/basic-web-pages/) and [Hello, CSS](https://www.internetingishard.com/html-and-css/hello-css/) tutorials for a quick read, or maybe [ACM Hack's Intro HTML/CSS](https://www.youtube.com/watch?v=sttIgSTnSg0) for a longer watch.
 
-If the JavaScript portion of the React workshop confused you, it may be worth spending a bit of time catching up on that first! For a short-ish read, Javascript.info's [JavaScript Fundamentals](https://javascript.info/first-steps) are solid; for a longer watch, check out [ACM Hack's Intro to JS](https://www.youtube.com/watch?v=Dk9kob-9Wkw).
+If the JavaScript portion of the React workshop confused you, it may be worth spending a bit of time catching up on that first! For a short-ish read, Javascript.info's [JavaScript Fundamentals](https://javascript.info/first-steps) are solid, as is Lisa Tagliaferri and Tania Rascia's [How To Code in JavaScript series](https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript); for a longer watch, check out [ACM Hack's Intro to JS](https://www.youtube.com/watch?v=Dk9kob-9Wkw).
 
 ### I'm a bit stuck on my project during the hackathon. Can I get help?
 
