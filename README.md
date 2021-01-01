@@ -2,20 +2,37 @@
 
 🏳️‍🌈 notes, code, and links for the workshops i ran @ QWER Hacks '21 (react, firebase, education track)! this is still a WIP as matt finishes writing, recording, and editing the content. stay tuned!
 
+## Table of Contents
+
+* [Workshop Legend](#workshop-legend)
+  * [React](#react)
+  * [Firebase (Cloud Firestore)](#firebase-cloud-firestore)
+  * [Education Track](#education-track)
+* [FAQs](#faqs)
+  * [What do I need to know to take X workshop?](#what-do-i-need-to-know-to-take-x-workshop)
+  * [I'm a bit stuck on my project during the hackathon. Can I get help?](#im-a-bit-stuck-on-my-project-during-the-hackathon-can-i-get-help)
+  * [I've got a question on a topic that's not directly covered in a tutorial. Where should I look for help?](#ive-got-a-question-on-a-topic-thats-not-directly-covered-in-a-tutorial-where-should-i-look-for-help)
+* [Resources and Thanks](#resources-and-thanks)
+* [Licensing](#licensing)
+
 ## Workshop Legend
 
 This repository has a lot of stuff going on! For your convenience, here are all of the workshop materials, divided up by topic.
 
 ### React
 
-The "actual" workshop; this is what you need to get your project up and running, and learn the basics of React!
+The React 101 core workshop; this is what you need to get your project up and running, and learn the basics of React! This is broken up into bite-sized chunks, where each chunk is ~ 5-8 minutes.
 
 0. [Setting up Node.js and a quick project tour](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/node-setup-and-tour)
-1. Hello World with React and Create React App
-2. Creating Your First Component
-3. Hooks and State in React
-4. Common React Patterns: Lists, Forms, and Conditional Rendering
-5. Using GitHub and Netlify to Deploy Your App For Free
+1. [Hello World with React and Create React App](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#hello-world-with-react-and-create-react-app)
+2. [Creating Your First Component](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#creating-your-first-component)
+3. [Hooks and State in React](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#hooks-and-state-in-react)
+4. [Common React Patterns: Lists](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#lists)
+5. [Common React Patterns: Forms](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#forms-and-passing-down-functions)
+6. [Common React Patterns: Conditional Rendering](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#conditional-rendering)
+7. Using GitHub and Netlify to Deploy Your App For Free
+
+[Here's the YouTube playlist for the videos in order, for your convenience](https://www.youtube.com/playlist?list=PLPO7_kXilXFbpznCbpni9fjg7MKU7lyKS).
 
 Some bonus content! Feel free to check these out if they interest you, but you might not need them for your project.
 
@@ -37,6 +54,10 @@ And some extra goodies:
 * Cloud Firestore versus Realtime Database
 * Using Firebase with React: the `useEffect` hook (do the React one first!)
 * Some other cool Firebase products
+
+### Education Track
+
+I did the video intro for the education track! You can see a rough outline of my script, or watch the video! TODO.
 
 ## FAQs
 
