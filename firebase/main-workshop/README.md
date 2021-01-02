@@ -92,26 +92,30 @@ A few notes about this app:
 Of course, if there's something that you don't understand, or you find a bug - feel free to let me know! You can always email me at [matt@matthewwang.me](mailto:matt@matthewwang.me), or use the mentor channel at QWER Hacks.
 
 Ok, let's get started!
+
 ## Setting up Firestore and the Firebase Console
 
 Before we do any coding, we first need to set up our project through Firebase. As Firebase is a Google product, *you have to have a Google account* for the rest of this workshop. Unfortunately, there's no getting around that.
 
 We also assume that **you've already downloaded the demo project**. If you haven't, please do that now!
+
 ### Creating a Project
 
 First, head to [the Firebase homepage](https://firebase.google.com/). You can hit the "Get Started" or "Go to console" button, they do the same thing.
 
-TODO
+![firebase homepage](./images/firebase-00-home.png)
 
 You'll be presented with either a list of projects, or a wizard. If you're on a list, hit the "Add project" button.
 
-TODO
+![firebase projects page](./images/firebase-01-projects.png)
 
 We can name our project whatever you want!
 
-TODO
+![firebase name a prjoect page](./images/firebase-02-name-project.png)
 
 For the sake of this tutorial, I won't enable Google Analytics (since it requires more setup). However, it's a useful tool if you're looking to explore!
+
+![firebase disable GA for your projects](./images/firebase-03-no-ga.png)
 
 Once you finish that, your project should be all set up! But, we've got to do a bit more configuration: for the Firebase app, and for Firestore.
 
@@ -119,23 +123,44 @@ Once you finish that, your project should be all set up! But, we've got to do a 
 
 Once you make your project, you'll probably be taken to a page like this. Hit the button to add a web application to your project.
 
-TODO
+![firebase project home page](./images/firebase-04-proj-home.png)
 
 Once you're in the menu, we'll go through a few options, First, register your app with a nickname. It's not insanely important what it will be, but we'll use it in our configuration.
+
+![firebase register new web app](./images/firebase-05-name-web-app.png)
 
 In our case, we're not going to deploy/host with Firebase. However, it's a useful tool!
 
 Now, we're going to be taken to an "Add Firebase SDK" page. It'll give us some code that's actually a bit useful. Copy that code to your clipboard...
 
-TODO
+![firebase copy firebase SDK code](./images/firebase-06-add-firebase-sdk.png)
 
 ... and we'll put it in our app! In particular, head to `index.html`, and bop it in at the end of the `<body>` tag, but above the `app.js` script tag:
 
 ```html
   ...
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCX0DiU1APY-nob9Wbp7fDs7fT3_F9l9eQ",
+        authDomain: "qwer-hacks-firebase-21.firebaseapp.com",
+        projectId: "qwer-hacks-firebase-21",
+        storageBucket: "qwer-hacks-firebase-21.appspot.com",
+        messagingSenderId: "353018754103",
+        appId: "1:353018754103:web:189774aeb8caae2d843bb2"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="app.js"></script>
   </body>
-  TODO
-  <script src="app.js"></script>
 </html>
 ```
 
@@ -147,15 +172,15 @@ We'll get back to using this in a moment. For now, let's finish our Firestore se
 
 Head to the Cloud Firestore page in your project, and hit Create database.
 
-TODO
+![firestore homepage](./images/firebase-07-firestore-home.png)
 
 We can choose to run in test mode - at this point in our app, unauthorized access is unlikely, and things aren't going to spiral out of control. However, security rules are important!
 
-TODO
+![firestore create database in test mode](./images/firebase-08-create-database.png)
 
 Next, we'll have to pick a data centre location. I'm in Los Angeles, California, so I'm going to pick something in the `us-west*` range. You can pick whichever region suits you best - keep in mind that many of our judges are on the west coast!
 
-TODO
+![firestore set database location](./images/firebase-09-set-db-region.png)
 
 Cool, now our Firestore has been officially set up!
 
