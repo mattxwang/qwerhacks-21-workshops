@@ -74,7 +74,9 @@ What about the operations on data?
 With that in mind, what's the problem that Firestore aims to solve? I'd categorize it into two, distinct problems:
 
 1. **In general, managing a database is lots of work.** You have to deploy a server, deal with security, update the software, and troubleshoot bugs. **Firestore does this all for you**, so you can focus on making your app!
-2. **Scaling databases is particularly hard.**
+2. **Scaling databases is particularly hard.** There are lots of problems once your app becomes complex: how do you sync between multiple clients? Multiple servers? Deal with lag? Concurrent operations? Firestore's engineers have built stuff to **make this easier**, though there are some trestrictions.
+
+In particular, our goal with Firestore is to remove all dependence on global state in our app; we will make Firestore the "single source of truth". More on that as we code!
 
 ### The Demo Code
 
@@ -135,15 +137,14 @@ Now, we're going to be taken to an "Add Firebase SDK" page. It'll give us some c
 
 ![firebase copy firebase SDK code](./images/firebase-06-add-firebase-sdk.png)
 
-... and we'll put it in our app! In particular, head to `index.html`, and bop it in at the end of the `<body>` tag, but above the `app.js` script tag:
+... and we'll put it in our app! In particular, head to `index.html`, and bop it in at the end of the `<body>` tag, but above the `app.js` script tag. We also need to add the script tag for firestore; **please copy this too** (it's not directly in the screenshot):
 
 ```html
   ...
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- REMEMBER TO COPY THIS TOO -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
 
     <script>
       // Your web app's Firebase configuration
@@ -190,17 +191,242 @@ We can now move on to doing some ~ app work ~!!!
 
 **CRUD** - **creating, reading, updating, and deleting** - is a really common set of database operations. So, we'll start off with walking through those operations with Firestore, through the lens of our to-do app. By the end of this section, we'll make our basic app functionality fully persistent!
 
+Something to keep in mind: our goal is to replace all instances of global state (marked by the `globalTodos` variable) with the use of Firestore as the single source of truth.
+
 We'll also start having checkpoints at the end of each section, just in case!
 
 ### Creating Sample Data
 
+Before we do any data, let's first figure out the structure of what we want, and create some dummy variables. This is always a good thing to do *before* you start coding: knowing how your data should be layed out is half the battle!
+
+If you take a peek at our starter code, you'll see that I've already defined the structure of a todo: currently, it has:
+
+1. the `text` of the todo
+2. the `complete` boolean field, that marks whether or not the todo should be "completed" (strikethrough)
+3. an `id` that joins the timestamp and todo text; we'll make use of this later
+
+Each object is then put into a global array that defines the order of the todos, and rendered into the app. We'll find later that this doesn't match up one-to-one with how Firebase wants it to be, but we'll cross that bridge when we get there.
+
+Let's switch gears to Firestore now. If you have no data yet, your Firestore panel will look like this:
+
+![firestore empty database](./images/firebase-10-empty-firestore.png)
+
+Let's start a **collection**. As we've mentioned, Firebase is a **document-based** database system. Collections in Firestore hold documents. In our case, we can think of one "to-do" as a document; the collection that holds these can be the todos collection.
+
+![firestore create collection](./images/firebase-11-create-collection.png)
+
+In Firestore, every item in a document must have a unique ID, or a key. You can think of a collection as a dictionary or a map. For now, we'll auto-generate the ID; later in our app we'll use something else.
+
+Each document itself has more key-value pairs, with different types. Interesting, each document in a collection can have *different sets* of keys; we're not going to delve too deeply into that though!
+
+We can now define our first document in our todos collection. So far, we'll just do `text` and `complete`; conveniently, they can match up with our JS types pretty easily.
+
+![firestore create document](./images/firebase-12-create-document.png)
+
+Once you make the document, you can see what the hierarchy looks like in the interface. At the top-level, we have all of our collections; after that, we have our `todos` collection, and it currently has one `todo`.
+
+![firestore document structure](./images/firebase-13-collection-structure.png)
+
+Great! We've thought about our data and made a sample document. Now, let's see if we can read that todo.
+
+(there's no checkpoint here since we haven't written any code!)
+
 ### Basic Read Operations
+
+Now that we've made some data, let's see if we can read and display it.
+
+First, at the very top of `app.js`, just under `'use strict'`, let's initialize our database client. We can do that in one line:
+
+```js
+'use strict'
+
+const db = firebase.firestore();
+
+...
+```
+
+This `db` reference is our entrypoint into our database. We only need to initialize it once! You might also ask, where does the `firebase` object come from? It comes from the script tags we imported in our earlier step (if you don't do that step properly, things won't work)!
+
+Now, we can use our `db` to read some things. The function that actually gets and renders all of our todos is called `regenerateTodos()`:
+
+```js
+// regenerates our todos from scratch (rather than updating by id)
+const regenerateTodos = () => {
+  todoContainer.innerHTML = generateTodos(globalTodos);
+  generateListeners(globalTodos);
+}
+```
+
+This function does two things:
+
+1. it takes all the todos, currently from `globalTodos`, and turns them into HTML elements with `generateTodos`
+2. then, it takes all the todos, currently from `globalTodos`, and activates the "done" and "nah" buttons on each todo
+
+If we want to inject Firestore into this routine, all we need to do is change the variable `globalTodos` to the `todos` collection. Here's how we can do that:
+
+```js
+// regenerates our todos from scratch (rather than updating by id)
+// now uses firestore!
+const regenerateTodos = () => {
+  db.collection("todos").get()
+    .then((snapshot) => {
+      const todos = snapshot.docs.map((doc) => doc.data());
+      todoContainer.innerHTML = generateTodos(todos);
+      generateListeners(todos);
+    })
+    .catch((error) => console.error("Error getting documents: ", error));
+}
+```
+
+Oh wow, there's a bunch of stuff going on here! Let's quickly break it down.
+
+First, `db.collection("todos")` is a reference to our `todos` collection that we made earlier. Calling `.get()` on a collection reference gives us *all* of the documents in the collection; later, we'll see how we can query the data instead.
+
+Then, we have this `.then` and `.catch` business. If you haven't seen this before, that's totally okay! These are called **Promises**. Promises are used to deal with asynchronous behaviour - actions that may take a long time and run "independently" with the rest of our code - and in particular, are useful when we *need* one action to happen *before* the other. Database reads, like ours, are a classic example. They take some time, and we only want to update our todos when the read is successful; if it fails, we should do something else.
+
+That's exactly what our code does. Both of `.then` and `.catch` take in functions for arguments; `.then`'s function gets called when the request is successful, while `.catch` gets called if it fails. Hopefully, the `.catch` is pretty self-explanatory.
+
+What's going on with the inside of our `.then`? Firestore's `Collection.get()` returns a collection "snapshot", which is the status of the collection at a certain time period.
+
+We can use the `.docs` property of a snapshot to get an array of every document in the collection, sorted by the key (for now, we only have one document, so this isn't a huge deal). Each document itself has two fields: `.id()` and `.data()`; they contain the document ID and the document contents respectfully. We'll map our snapshot into an array of todo data fields (wrapping up our `const todos` declaration).
+
+Then, we just plug our `todos` array into the two lines from our non-database version - the way we've written the code, everything works out!
+
+![working firestore read](./images/01-working-read.png)
+
+Omg! Look at that! Things are working out just fine!
+
+I know we just threw a bunch of code at you, but the best way to get more practice is to just start using Firestore more. I promise you, things aren't too too tricky to get used to.
+
+Now, let's work on getting creating data to work properly :)
+
+As a quick recap, we:
+
+* created a Firestore database reference called `db`
+* accessed a collection in our database using `.collection()`
+* used `.get()` to get a snapshot of our data, with promises
+* used our resulting data to generate our to-do
+
+**Checkpoint 1**: TODO
 
 ### Creating Data Programatically
 
+*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](#TODO).
+
+Now that we've read some data to our database, we want to be able to write data to it too! In particular, when we create a todo, we should add it to our Firestore database.
+
+The function that handles creating new todos is here:
+
+```js
+// our event listener for the text box, which adds a todo
+// when the user hits enter with a non-empty input value
+const handleTodoInput = (event) => {
+  // why this? see https://stackoverflow.com/questions/11365632/how-to-detect-when-the-user-presses-enter-in-an-input-field
+  if (!event) event = window.event;
+  const keyCode = event.code || event.key;
+  const text = todoInput.value;
+  if (keyCode == 'Enter' && text !== "") {
+    const newTodo = newTodoObject(text);
+    globalTodos.push(newTodo);
+    regenerateTodos();
+    todoInput.value = "";
+  }
+}
+```
+
+The first bit is a set of input handlers; the important bit is the lines:
+
+```js
+const newTodo = newTodoObject(text);
+globalTodos.push(newTodo);
+regenerateTodos();
+```
+
+What do we need to change here? All we need to do is change this `globalTodos.push` statement to instead push `newTodo` to Firestore. Since `regenerateTodos()` already pulls from Firestore, we don't need to do any global updating!
+
+Here's what we're going to change those lines to instead:
+
+```js
+const newTodo = newTodoObject(text);
+db.collection("todos").doc(newTodo.id).set(newTodo)
+  .then((_) => regenerateTodos())
+  .catch((error) => {
+      console.error("Error adding document: ", error);
+  });
+```
+
+What's going on here?
+
+* `db.collection().doc(id)` gets a reference to a document in the collection with the Firestore ID given by `id`. In our case, we (hope) that our IDs are unique, so there shouldn't be one for our just-made todo. IDs are important; we'll talk about them later!
+* `.set()` does one of two things: if the document doesn't exist (like in our case), it will create it and set the data to be whatever we pass in. If the document does exist, it'll **completely overwrite** the resulting data.
+* `.set()` returns a promise. On an error, we just log the error. The interesting case is our `.then` - here, we only regenerate our todos **after** our document was created. This makes sure that we only pull data after our document has been created, not before!
+
+That's it! And it works out of the box - we only needed to adjust that line of code. This works because `newTodo` is a simple JavaScript object (just key-value pairs), so Firebase can automatically handle turning it into a document.
+
+![gif of user typing in "i don't feel like doing anything at all" and creating a todo](./images/02-working-write.gif)
+
+Yup, adding a document was really *that* easy. Of course, as your data becomes more complex, your document does too - but the procedure (calling `.doc().set()` on a collection reference) is the same.
+
+Next, let's get some of our buttons working - probably the "nah" button first!
+
+As a quick recap, we covered:
+
+* using the `.doc()` function on a collection to get a document (which may or may not exist)
+* using the `.set()` function on a document to create it, with some accompanying data
+* performing dependency actions synchronously, i.e. regenerating the todos *after* creating one
+
+**Checkpoint 2**: TODO
+
 ### Deleting Data
 
+*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](#TODO).
+
+Okay, so now we can create and read todos. Let's first deal with deleting them.
+
+This function handled deleting a document earlier:
+
+```js
+const onNahClick = (id) => {
+  globalTodos = removeTodo(globalTodos, id);
+  regenerateTodos();
+}
+```
+
+As always, our goal is to replace the `globalTodos` line. Luckily, Firestore has a one-line (ish) solution for us!
+
+```js
+const onNahClick = (id) => {
+  db.collection("todos").doc(id).delete()
+    .then((_) => regenerateTodos())
+    .catch((error) =>  {
+      console.error("Error removing document: ", error);
+    });
+}
+```
+
+Here, we get a reference to the document with `.doc()`, as usual. Then, we just call `.delete()`, and set up a Promise to let us know if something goes wrong. If our request is successful, *then* we regenerate our todos. This is the same pattern as the previous section, but it's really important!
+
+![gif of user deleting a todo, and then panicking because the other one is broken](./images/03-working-delete.gif)
+
+It mostly works, but you might notice that our dummy todo doesn't delete properly. That's because **we never set the document ID for it**! But that's okay, you can delete things in the firebase console:
+
+![gif of user deleting the broken todo in firebase](./images/03-firebase-delete-success.gif)
+
+And great! You should be able to create and delete todos as you wish. Exciting news!
+
+As a quick recap, we covered:
+
+* the `.delete()` operation on a firestore document
+* again, the importance of chaining dependent synchronous actions
+* deleting items in the firestore console
+
+**Checkpoint 3**: TODO
+
 ### Updating Data
+
+*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](#TODO).
+
+**Checkpoint 4**: TODO
 
 ## Cool Tricks with Firestore: Listeners, Transactions, Querying
 
