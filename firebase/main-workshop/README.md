@@ -406,7 +406,7 @@ const onNahClick = (id) => {
 
 Here, we get a reference to the document with `.doc()`, as usual. Then, we just call `.delete()`, and set up a Promise to let us know if something goes wrong. If our request is successful, *then* we regenerate our todos. This is the same pattern as the previous section, but it's really important!
 
-![gif of user deleting a todo, and then panicking because the other one is broken](./images/03-working-delete.gif)
+![gif of user deleting a todo, and then panicking because the other one is broken](./images/03-working-delete-kinda.gif)
 
 It mostly works, but you might notice that our dummy todo doesn't delete properly. That's because **we never set the document ID for it**! But that's okay, you can delete things in the firebase console:
 
@@ -426,6 +426,71 @@ As a quick recap, we covered:
 
 *We'll be building off the previous section*; [check out the checkpoint if you haven't already!](#TODO).
 
+Last but not least, let's implement the "done" feature for our app. You might guess what we already want to do - find the function that we've written to toggle the single item, and instead of updating the global state, adjust the field in the firestore document.
+
+First, let's do a quick refactor. We're going to make `onDoneClick` pass in the entire `todo` object, not just the ID; we want to know the current status, so we can flip it.
+
+```js
+// generates the listeners for every done and nah button
+// is this inefficient? maybe ;)
+const generateListeners = todos => {
+  todos.forEach(todo => {
+    document.getElementById(`done-${todo.id}`).onclick = () => onDoneClick(todo.id);
+    document.getElementById(`nah-${todo.id}`).onclick = () => onNahClick(todo.id);
+  });
+}
+```
+
+to
+
+```js
+// generates the listeners for every done and nah button
+// is this inefficient? maybe ;)
+const generateListeners = todos => {
+  todos.forEach(todo => {
+    document.getElementById(`done-${todo.id}`).onclick = () => onDoneClick(todo);
+    document.getElemen tById(`nah-${todo.id}`).onclick = () => onNahClick(todo.id);
+  });
+}
+```
+
+Now, let's refactor our `onDoneClick`; change from
+
+```js
+const onDoneClick = (id) => {
+  globalTodos = toggleTodoStatus(globalTodos, id);
+  regenerateTodos();
+}
+```
+
+to this:
+
+```js
+const onDoneClick = (todo) => {
+  db.collection("todos").doc(todo.id)
+    .update({complete: !todo.complete})
+    .then((_) => regenerateTodos())
+    .catch(function(error) {
+      console.error("Error updating document: ", error);
+    });
+}
+```
+
+Hopefully that's not too complicated; a step-by-step:
+
+1. `todo` holds the current state of our todo object
+2. we get a reference to the document, with `.todo.id`
+3. we call the `.update()` function; this is like `.set()`, but only updates the mentioned keys (instead of completely replacing the document)
+4. then, we regenerate the todos once the update succeeds
+
+![gif of user completing a todo](./images/04-working-update.gif)
+
+And that's it! Hopefully, you're starting to get the feel for Firestore's basics!
+
+As a quick recap, this covers:
+
+* using `.update()` on a document (instead of `.set()`)
+
 **Checkpoint 4**: TODO
 
 ## Cool Tricks with Firestore: Listeners, Transactions, Querying
@@ -433,6 +498,52 @@ As a quick recap, we covered:
 Now that we've nailed the basic CRUD operations, I think we should take a look at some of the cooler features that Firestore offers. Each of these can make your project just *that* much more powerful! We'll also use this as an opportunity to polish off the rest of our app's functionality.
 
 ### Listeners
+
+*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](#TODO).
+
+One thing you'll notice is that if a change happens outside of our app, we have to refresh our app to see the change happen. You can do this by having two copies of our app open, or changing the variable in the console. If you want a todo app that can be shared between teams (like Google Docs), then this is a must-have feature.
+
+We can implement this using something called a "listener". A listener, well, *listens* for changes to something: every time the document or collection changes, it can automatically update our app. How convenient!
+
+Luckily for us, Firestore makes listeners super easy to implement. Here's what we're going to do; at the end of the `app.js` file, let's bop this down:
+
+```js
+db.collection("todos").onSnapshot(
+  (snapshot) => {
+    const todos = snapshot.docs.map((doc) => doc.data());
+    todoContainer.innerHTML = generateTodos(todos);
+    generateListeners(todos);
+  },
+  (error) => console.error("Error getting documents: ", error));
+```
+
+Then, you should remove/comment out every line that calls `regenerateTodos()`. Why's that? Previously, we had to manually call `regenerateTodos()` to get the latest copy of our data. Our listener handles that now, so we don't have to worry about it at all!
+
+And it works!
+
+![gif of two todo windows open; the user updates a todo in one, and sees the changes in the other](./images/05-working-listener.gif)
+
+What's going on here? This looks *so much* like our read data code!
+
+1. we're using the `.onSnapshot` **listener**. every time the `todos` collection changes, the first function is called.
+2. logically, this function does exactly what our read data code does; it gets the documents and maps them into todos!
+3. the second function is an error function that gets called when there's a mistake, like if there's no internet, or if the user permissions change.
+
+And that's it!
+
+Quickly, some extra notes on listeners:
+
+* listeners aren't *always* the answer! you should really think to yourself: does your app need live-listening? does it make more sense to make the user refresh?
+* this is not the most efficient way to use our listener. we could listen for only the items that changed, and then *just* update those. Take a look at ["View changes between snapshots"](https://firebase.google.com/docs/firestore/query-data/listen?authuser=0#view_changes_between_snapshots) for a worked example.
+* if you know you need to stop the listener before the app closes (e.g. a user logs out), you should "unsubscribe" the listener. more on that in ["Detach a listener"](https://firebase.google.com/docs/firestore/query-data/listen?authuser=0#detach_a_listener)
+
+If you'd like, you can now delete `regenerateTodos()`; we're not going to use it anymore. There are also other ways to refactor these functions if we'd like!
+
+As a quick recap, we covered:
+
+* using `.onSnapshot` and its two arguments: the function called on every change, and the error function
+
+**Checkpoint 5**: TODO
 
 ### Transactions
 
