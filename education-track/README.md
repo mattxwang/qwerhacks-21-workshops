@@ -1,0 +1,74 @@
+# Education Track Primer
+
+This README is a generally-accurate script for Matt's video on the **Education Track**, where Matt introduces the track, mentions some (hopefully) helpful advice and tips for your project, and goes over a previous submission!
+
+## Introduction
+
+Hey! My name is Matt, my pronouns are he/him, and I'm a third-year computer science and math-economics major at UCLA! I'm really passionate about education, and in particular, the intersection between education and technology - or EdTech. I'm super grateful to have an opportunity to work on these types of projects at ACM Teach LA, where I help lead both traditional teaching and new, interactive tech-based teaching methods. I also love teaching and mentoring devs, and love doing it at QWER Hacks - super excited to see what you will do!
+
+In this short video, I want to spend some time introducing you to the hackathon track and offer some general tips and tricks for your own education project!
+
+## The Education Track
+
+**Education** is one of the [four tracks at QWER Hacks 2021](https://www.qwerhacks.com/). We're interested in how your project can *celebrate and uplift underrepresented voices*, but more broadly, to make education more accessible, inclusive, and effective.
+
+Admittedly, that's pretty vague. So what are we looking for? The short answer is, really anything related to education! We equally welcome projects that help small audiences to generalist tools; projects that focus on "traditional" academic education or learning in the most broad way possible; projects used by teachers, students, administrators, parents, friends, and anyone in between! Long story short, if you feel like your project fits within education, it probably fits in this track!
+
+In terms of judging and assessment, there are two track-specific criterion in the judging rubric:
+
+1. How relevant + important was the project focus to the team's chosen track?
+2. How creatively did the team's project tackle a problem within their domain of choice? (double-weight)
+
+Here, we're looking for **relevance + importance** and **creativity**! In particular, note how much emphasis we've put into creative solutions: EdTech is definitely an underexplored field, and we'd love to see what your take is on how we can make it better!
+
+## Tips and Tricks
+
+We want to see you succeed at QWER Hacks! Here are a few tips and tricks on how to scope out, build, and present your project - feel free to use as little or as many of these as you'd like!
+
+### Project Ideas and Scope
+
+Coming up with education ideas is hard! So, I'll spend the most time on this.
+
+My biggest tip is to focus on **your experience**. Consider things that:
+
+* frustrate you about school in general
+* currently frustrate you with virtual learning in a pandemic
+* you've struggled to learn, for X reason
+* you've always wanted to learn, but didn't get around because X reason
+* are hard to learn in their current form (especially if interactivity would help)
+
+In my work with Teach LA, we try to bring the advantages of tech - in particular, interactivity and accessibility - to teaching people about computer science. As the pandemic moves more education online, we've found that lots of learning can be digitized!
+
+In my *personal* experience with hackathons, making a small app that really solves a niche problem, but does it really well, is both easier and more impactful than making an app that *solves everything*. I think this is especially true with education, because the current industry is pretty slow, resistant to change, and doesn't do much technical innovation - and often doesn't pay attention to minority voices.
+
+And of course, keep in mind that education isn't just math, english, and history! Education also includes:
+
+* learning about social issues
+* creating tools for students and educators
+* dealing with "life" skills like personal finance or health
+* developing accessible education content
+* intersectional approaches to "traditional" education
+* and more!
+
+In particular, there's lots of LGBTQIA issues that could benefit from innovative education. Consider:
+
+* innovative ways to present LGBTQIA history, theory, and language
+* how inaccurate, ineffective, and *boring* some online diversity trainings are!
+* creating support systems for underrepresented and margnialized queer voices
+* queer-friendly day-to-day digital services that priortize inclusivity
+* and more!
+
+I just want to emphasize again that chipping away at problems with tailor-fit solutions is great! Not only does it lead to manageable hackathon projects, it also lets you fill the gaps in our current education system - and hopefully make the world just *that* much better.
+
+### Building
+
+Here, I'll be a bit more brief!
+
+First, this is a hackathon! It's not a Series A or an IPO. It's **100% fine** if your project doesn't fully work, have some bugs, or need some polish. Your job is to create a proof-of-concept that shows that this is an interesting idea, that could warrant further exploration!
+
+...
+
+
+## Previous Projects and Inspirations
+
+One of my all-time inspirations for interactive education is
