@@ -39,25 +39,30 @@ Some bonus content! Feel free to check these out if they interest you, but you m
 * [Should I use React in my hackathon project?](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/should-i-use-react)
 * Classes vs Hooks in React
 * The `useEffect` hook
-* Some Useful React Resources
+* Some Useful React Resources (written)
 
 ### Firebase (Cloud Firestore)
 
-The "actual" workshop; here, we create a simple vanilla JS app and integrate Firebase.
+The "actual" workshop; here, we create a simple vanilla JS app and integrate Firebase. Similar to the React videos, the workshop is broken up into small chunks!
 
-0. Setting up Firestore and the Firebase Console
-1. Creating, Reading, Updating, and Deleting data with Firestore
-2. Listeners, Transactions, Querying
+0. [Setting up Firestore and the Firebase Console](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#setting-up-firestore-and-the-firebase-console)
+1. [Basic Data Operatins (CRUD) in Firestore](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#basic-data-operations-crud-in-firestore):
+    * [Creating Sample Data](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#creating-sample-data) and [Reading it](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#basic-read-operations)
+    * Programatically [Creating](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#creating-data-programatically), [Deleting](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#deleting-data), and [Updating](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#updating-data) Data
+2. Cool Tricks with Firestore
+    * [Listeners](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#listeners)
+    * Querying and Ordering
+    * Transactions
 
 And some extra goodies:
 
 * Cloud Firestore versus Realtime Database
 * Using Firebase with React: the `useEffect` hook (do the React one first!)
-* Some other cool Firebase products
+* Some other cool Firebase products (written)
 
 ### Education Track
 
-I did the video intro for the education track! You can see a rough outline of my script, or watch the video! TODO.
+I did the video intro for the education track! You can see [a rough outline of my script](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/education-track), or watch the video! TODO.
 
 ## FAQs
 

@@ -48,9 +48,9 @@ And of course, keep in mind that education isn't just math, english, and history
 * intersectional approaches to "traditional" education
 * and more!
 
-In particular, there's lots of LGBTQIA issues that could benefit from innovative education. Consider:
+In particular, there's lots of LGBTQIA+ issues that could benefit from innovative education. Consider:
 
-* innovative ways to present LGBTQIA history, theory, and language
+* innovative ways to present queer history, theory, and language
 * how inaccurate, ineffective, and *boring* some online diversity trainings are!
 * queer-friendly educational services that priortize inclusivity
 * and more!
