@@ -37,8 +37,6 @@ My biggest tip is to focus on **your experience**. Consider things that:
 * you've always wanted to learn, but didn't get around because X reason
 * are hard to learn in their current form (especially if interactivity would help)
 
-In my work with Teach LA, we try to bring the advantages of tech - in particular, interactivity and accessibility - to teaching people about computer science. As the pandemic moves more education online, we've found that lots of learning can be digitized!
-
 In my *personal* experience with hackathons, making a small app that really solves a niche problem, but does it really well, is both easier and more impactful than making an app that *solves everything*. I think this is especially true with education, because the current industry is pretty slow, resistant to change, and doesn't do much technical innovation - and often doesn't pay attention to minority voices.
 
 And of course, keep in mind that education isn't just math, english, and history! Education also includes:
@@ -54,8 +52,7 @@ In particular, there's lots of LGBTQIA issues that could benefit from innovative
 
 * innovative ways to present LGBTQIA history, theory, and language
 * how inaccurate, ineffective, and *boring* some online diversity trainings are!
-* creating support systems for underrepresented and margnialized queer voices
-* queer-friendly day-to-day digital services that priortize inclusivity
+* queer-friendly educational services that priortize inclusivity
 * and more!
 
 I just want to emphasize again that chipping away at problems with tailor-fit solutions is great! Not only does it lead to manageable hackathon projects, it also lets you fill the gaps in our current education system - and hopefully make the world just *that* much better.
@@ -66,9 +63,30 @@ Here, I'll be a bit more brief!
 
 First, this is a hackathon! It's not a Series A or an IPO. It's **100% fine** if your project doesn't fully work, have some bugs, or need some polish. Your job is to create a proof-of-concept that shows that this is an interesting idea, that could warrant further exploration!
 
-...
+The other piece of building advice I'll give is you should really hammer out one use-case/workflow, rather than spread your time across a bunch of them. Impressive proof-of-concepts really nail a specific part of the problem that they try to solve, and let the audience + judges extrapolate! It also lets you focus in on learning a specific technology, design pattern, etc.
 
+### Presenting and Pitching
+
+QWER Hacks already has an amazing pitch workshop coming up, but my quick two cents on pitching: really focus on how your idea is better head-to-head than the existing status quo. If you can paint a narrative for the judges on what's currently wrong, and how your project makes education *that much better*, you've done their work for them! I'd encourage you to highlight the *creative solution* you've presented, since that's weighted in judging.
 
 ## Previous Projects and Inspirations
 
-One of my all-time inspirations for interactive education is
+One of my favourite projects from QWER Hacks 2020 was [qspace](https://devpost.com/software/qspace). Two hackers developed a beautiful, visually engaging set of mini-modules that make the user think critically about their actions, opposed to traditional Title IX training modules. Their app allows users in many different situations - from parents of gay teenagers to friends of someone coming out as asexual - to step through their responses and figure out the best way to support the queer community. In their words,
+
+> We chose to create fillable answers to simulate more natural responses rather than just multiple choice. In this way we were trying to get people to think critically about interactions rather than mindlessly filling out modules.
+
+Stepping back from QWER Hacks, one of my all-time inspirations for interactive education is [Nicky Case](https://ncase.me/). They've made some absolutely gorgeous and engaging playable games on [the prisoner's dilemma](https://ncase.me/trust/), [diversity and bias in large groups of people](https://ncase.me/polygons/), and even [an interactive exploration of their own coming out experience](https://ncase.itch.io/coming-out-simulator-2014).
+
+## Last Thoughts
+
+Hackathons are a place to grow and learn, and we want to help you do that! It's totally reasonable to be stressed or feel nervous about building a project in such a short timeframe, but we know you can do it - and we're here to support you! If you've ever got questions or need some help, please reach out to the hackathon mentors - me included - we'd love to help you!
+
+I'm **so excited** to see what y'all will build. Good luck hacking!
+
+## Attribution
+
+The contents of this workshop (like the rest of this repository) are dual-licensed under the [MIT License](https://github.com/malsf21/qwerhacks-21-workshops/blob/main/LICENSE) and the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/); feel free to use whichever license suits your purpose better.
+
+Many thanks to [Emmy](https://www.emmycao.com/) for letting us showcase her amazing hack from QWER Hacks 2020!
+
+I'd love to hear if you found this helpful, or if you have any suggestions! Please send me an email at [matt@matthewwang.me](mailto:matt@matthewwang.me).
