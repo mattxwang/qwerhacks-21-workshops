@@ -71,7 +71,7 @@ QWER Hacks already has an amazing pitch workshop coming up, but my quick two cen
 
 ## Previous Projects and Inspirations
 
-One of my favourite projects from QWER Hacks 2020 was [qspace](https://devpost.com/software/qspace). Two hackers developed a beautiful, visually engaging set of mini-modules that make the user think critically about their actions, opposed to traditional Title IX training modules. Their app allows users in many different situations - from parents of gay teenagers to friends of someone coming out as asexual - to step through their responses and figure out the best way to support the queer community. In their words,
+One of my favourite projects from QWER Hacks 2020 was [qspace](https://devpost.com/software/qspace). Two hackers developed a beautiful, visually engaging set of mini-modules. Their app allows users in many different situations - from parents of gay teenagers to friends of someone coming out as asexual - to step through their responses and figure out the best way to support the queer community. In their words,
 
 > We chose to create fillable answers to simulate more natural responses rather than just multiple choice. In this way we were trying to get people to think critically about interactions rather than mindlessly filling out modules.
 
