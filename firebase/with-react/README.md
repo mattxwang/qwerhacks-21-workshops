@@ -24,7 +24,7 @@ This file is broken up into several pieces, but the content is all filmed in one
 
 **Warning**: we assume that you've already done both the [React 101 workshop](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop) and the [Cloud Firestore workshop](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop). We will **skip over things done in these workshops, so please take a look at them first!!**
 
-We will start with the code at the end of the react workshop; for your convenience, we've included it in the `starter-code` folder of this workshop.
+We will start with the code at the end of the react workshop; for your convenience, we've included it in the [`starter-code`](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/with-react/starter-code) folder of this workshop.
 
 ### Creating and Configuring Firebase, Firestore
 
@@ -229,7 +229,7 @@ As a quick recap, we:
 * uses the effect hook to call `setupFirestoreListener()` only once
 * updates `<Tweet />` renders to use a `key`
 
-**Checkpoint 1**: TODO
+**Checkpoint 1**: [code checkpoint](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/with-react/checkpoint-1)
 
 ### Creating Tweets
 
@@ -297,7 +297,7 @@ As a quick recap, we:
 * changed the `createTweet` function to send the new tweet to firestore instead
 * use `.orderBy` to order the rendered tweets by date published
 
-**Checkpoint 2**: TODO
+**Checkpoint 2**: [code checkpoint](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/with-react/checkpoint-2)
 
 ### Updating Tweets and Refactoring
 
@@ -424,7 +424,7 @@ It's a bit slower than the instantaneous state update, especially because transa
 
 And that's it! We've completely converted our existing state-based application to now also use Firestore.
 
-The last checkpoint is [here, if you'd like](#TODO).
+The last checkpoint is [here, if you'd like](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/with-react/final-checkpoint).
 
 ## Conclusion and Next Steps
 

@@ -939,7 +939,7 @@ A quick recap, we covered:
 * conditionally rendering with `?`
 * conditionally rendering with `&&`
 
-**Checkpoint 5:** [check out the code](./05-checkpoint). This is the final checkpoint!
+**Checkpoint 5:** [check out the code](./05-checkpoint). This is the final checkpoint! You can also view a full project codebase [here](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/with-react/starter-code).
 
 *Aside*: there's actually a different way that we could approach this, which is to refactor `ComposeTweet` into a generic `TextInput`-type component, and reuse the same component for the author name and tweet composition tasks. In fact, given our current project, this is likely what I would've done! But, if things got more complicated (e.g. you can add images to Tweets), then this approach wouldn't work as well.
 
@@ -1064,7 +1064,7 @@ These fundamentals let you explore the whole wide world of React - and believe m
 * add routing to your app with [React Router](https://reactrouter.com/)
 * create simple graphs and visualizations with [react-plotly](https://plotly.com/javascript/react/)
 * implement beautiful animations with [react-anime](https://alain.xyz/libraries/react-anime)
-* integrate it with Firestore - I've done a follow-up workshop on this :)
+* integrate it with Firestore - we have a [follow-up workshop on this](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/with-react) :)
 
 The world of React can be scary, and we're here to help! Many of our mentors have React experience (including me), so feel free to reach out to us during the hackathon if you've got questions! On top of that, you're always free to contact me if you've got any questions about this workshop.
 
