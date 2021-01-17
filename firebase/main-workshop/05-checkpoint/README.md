@@ -1,6 +1,6 @@
 # Firebase 101 Workshop Checkpoint #5
 
-At this point, you should've completed ["Updating Data"](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#updating-data).
+At this point, you should've completed ["Cool Tricks with Firestore: Listeners"](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#listeners).
 
 ## Files
 

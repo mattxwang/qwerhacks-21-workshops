@@ -31,7 +31,7 @@ This workshop is meant to be web framework agnostic, so we implement everything 
   * [Updating Data](#updating-data)
 * [Cool Tricks with Firestore: Listeners, Transactions, Querying](#cool-tricks-with-firestore-listeners-transactions-querying)
   * [Listeners](#listeners)
-  * [Transactions](#transactions)
+  * [Batched Writes](#batched-writes)
   * [Querying](#querying)
 * [Conclusion and Next Steps](#conclusion-and-next-steps)
 * [Licensing, Attribution, and Resources](#licensing-attribution-and-resources)
@@ -307,11 +307,11 @@ As a quick recap, we:
 * used `.get()` to get a snapshot of our data, with promises
 * used our resulting data to generate our to-do
 
-**Checkpoint 1**: TODO
+**Checkpoint 1**: [code checkpoint](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/01-checkpoint)
 
 ### Creating Data Programatically
 
-*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](#TODO).
+*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/01-checkpoint).
 
 Now that we've read some data to our database, we want to be able to write data to it too! In particular, when we create a todo, we should add it to our Firestore database.
 
@@ -375,11 +375,11 @@ As a quick recap, we covered:
 * using the `.set()` function on a document to create it, with some accompanying data
 * performing dependency actions synchronously, i.e. regenerating the todos *after* creating one
 
-**Checkpoint 2**: TODO
+**Checkpoint 2**: [code checkpoint](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/02-checkpoint)
 
 ### Deleting Data
 
-*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](#TODO).
+*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/02-checkpoint).
 
 Okay, so now we can create and read todos. Let's first deal with deleting them.
 
@@ -420,11 +420,11 @@ As a quick recap, we covered:
 * again, the importance of chaining dependent synchronous actions
 * deleting items in the firestore console
 
-**Checkpoint 3**: TODO
+**Checkpoint 3**: [checkpoint code](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/03-checkpoint)
 
 ### Updating Data
 
-*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](#TODO).
+*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/03-checkpoint).
 
 Last but not least, let's implement the "done" feature for our app. You might guess what we already want to do - find the function that we've written to toggle the single item, and instead of updating the global state, adjust the field in the firestore document.
 
@@ -491,7 +491,7 @@ As a quick recap, this covers:
 
 * using `.update()` on a document (instead of `.set()`)
 
-**Checkpoint 4**: TODO
+**Checkpoint 4**: [checkpoint code](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/04-checkpoint)
 
 ## Cool Tricks with Firestore: Listeners, Transactions, Querying
 
@@ -499,7 +499,7 @@ Now that we've nailed the basic CRUD operations, I think we should take a look a
 
 ### Listeners
 
-*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](#TODO).
+*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/04-checkpoint).
 
 One thing you'll notice is that if a change happens outside of our app, we have to refresh our app to see the change happen. You can do this by having two copies of our app open, or changing the variable in the console. If you want a todo app that can be shared between teams (like Google Docs), then this is a must-have feature.
 
@@ -543,9 +543,67 @@ As a quick recap, we covered:
 
 * using `.onSnapshot` and its two arguments: the function called on every change, and the error function
 
-**Checkpoint 5**: TODO
+**Checkpoint 5**: [checkpoint code](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/05-checkpoint)
 
-### Transactions
+### Batched Writes
+
+*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/05-checkpoint).
+
+There are many issues with databases that Firebase aims to solve. One is: how do we make sure that multiple interactions happen at the same time, given that each operation can only happen one-after-the-other? In our case, this is relevant for the "nah all" button: we want to delete all of the todos at once, rather than sending a bajillion requests.
+
+One neat type of Firestore functionality is **batched writes**. This lets you queue up several create/update/delete operations together and execute them *all at once*! It's a great solution for our problem, but also is super relevant for many other (higher-stakes) problems too.
+
+(as a note: none of your operations can involve *reads*. Ours doesn't, so we're chilling!)
+
+Let's use batched writes to flesh out our `onNahAll` function. Start with this:
+
+```js
+const onNahAll = () => {
+  globalTodos = [];
+}
+```
+
+And we're going to give it a quick ~ transformation ~ :
+
+```js
+const onNahAll = () => {
+  const batch = db.batch();
+  db.collection("todos").get()
+    .then((snapshot) => {
+      snapshot.docs.forEach((doc) =>
+        batch.delete(db.collection("todos").doc(doc.id)))
+    })
+    .then(() => batch.commit()
+      .catch((error) => console.error("Error on batch write: ", error)))
+    .catch((error) => console.error("Error getting documents: ", error));
+}
+```
+
+Oop! This is a lot. Let's break it down:
+
+1. first, we create a `batch` object with `db.batch()`. We're going to use this a lot!
+2. we get every single todo with `.get()`; take a peek at [Basic Read Operations](#basic-read-operations) for more info!
+3. on each document in the collection, we add it to our batch transaction with `batch.delete()`. note that a) we can't just pass `doc` in, and b) **we haven't actually deleted it yet**
+4. once we've completed all of our `.forEach()` iterations, we *then* actually perform the batch operation with `batch.commit()`
+5. we have a few `catch` statements in case there's an error
+
+Take your time to digest this code if you'd like, it's not the most readable.
+
+And let's see it in action:
+
+![gif of delete all button working](./images/06-working-nah-all.gif)
+
+This is a great toy example of using batched writes, though as you can imagine, they can become much more complex. [Check out the documentation for more info](https://firebase.google.com/docs/firestore/manage-data/transactions#batched-writes). And as you can imagine, `batch.set()` and `batch.update()` exist and do similar things.
+
+(as an aside, there's a slight caveat here: we're kind of [deleting the collection](https://firebase.google.com/docs/firestore/manage-data/delete-data), which has some gotchas. [check out the docs](https://firebase.google.com/docs/firestore/manage-data/delete-data) for more info)!
+
+As a quick recap, we:
+
+* created a batch request object with `db.batch()`
+* added items to the queue with `batch.delete()` or (`batch.update()`, `batch.set()`)
+* executed the batch with `batch.commit()`
+
+**Checkpoint 6**: [checkpoint code](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/06-checkpoint)
 
 ### Querying
 
@@ -557,7 +615,6 @@ As a quick recap, we covered:
 
 * [QWER Hacks 2020's Intro to Web Dev with React and Firebase](https://github.com/malsf21/qwerhacks-web-dev-workshop)
 * [Learning Lab Crash Course: Intro to Firebase](https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/18-firebase)
-
 
 He's also got a few favourite external sources, including:
 

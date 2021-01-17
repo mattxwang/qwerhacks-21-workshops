@@ -51,6 +51,7 @@ The "actual" workshop; here, we create a simple vanilla JS app and integrate Fir
     * Programatically [Creating](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#creating-data-programatically), [Deleting](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#deleting-data), and [Updating](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#updating-data) Data
 2. Cool Tricks with Firestore
     * [Listeners](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#listeners)
+    * [Batch Writes](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#batch-writes)
     * Querying and Ordering
     * Transactions
 
