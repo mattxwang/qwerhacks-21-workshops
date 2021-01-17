@@ -595,6 +595,8 @@ And let's see it in action:
 
 This is a great toy example of using batched writes, though as you can imagine, they can become much more complex. [Check out the documentation for more info](https://firebase.google.com/docs/firestore/manage-data/transactions#batched-writes). And as you can imagine, `batch.set()` and `batch.update()` exist and do similar things.
 
+Batched writes also have a friend - [transactions](https://firebase.google.com/docs/firestore/manage-data/transactions) - that allow you to read, but with additional restrictions.
+
 (as an aside, there's a slight caveat here: we're kind of [deleting the collection](https://firebase.google.com/docs/firestore/manage-data/delete-data), which has some gotchas. [check out the docs](https://firebase.google.com/docs/firestore/manage-data/delete-data) for more info)!
 
 As a quick recap, we:
@@ -607,7 +609,96 @@ As a quick recap, we:
 
 ### Querying
 
+*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/06-checkpoint).
+
+We have one last operation to finish, which is our "done all" button. There are quite a few ways to approach this problem, but one way to do it is with a **query**. Queries are ways we can ask our database (in this case, Firestore) to give us only *certain types* of data. This is a really common operation in many applications: give us tweets from a certain time period, people that you're friends with, songs by girl in red.
+
+In this case, let's take all the todos that aren't done, and batch write them to all be done. It's a great use of querying and what we've learned in the past workshop!
+
+Take this:
+
+```js
+// completes all the todos!
+const onDoneAll = () => {
+  globalTodos = completeAllTodos(globalTodos);
+}
+```
+
+and plop this in instead:
+
+```js
+// completes all the todos!
+// now with firestore!
+const onDoneAll = () => {
+  const batch = db.batch();
+  db.collection("todos")
+    .where("complete", "==", false)
+    .get()
+    .then((snapshot) => {
+      snapshot.docs.forEach((doc) => {
+        const todoRef = db.collection("todos").doc(doc.id)
+        batch.update(todoRef, {"complete": true})
+      })
+    })
+    .then(() => batch.commit()
+      .catch((error) => console.error("Error on batch write: ", error)))
+    .catch((error) => console.error("Error getting documents: ", error));
+}
+```
+
+Woah, what's going on here? We can break it down like our delete all functionality:
+
+1. create a batch object
+2. before our `.get()`, we use `.where()`. this lets us put in a condition - in this case, whether the field `complete == false`; then, when we run `.get()`, we'll only got documents that fulfill this condition!
+3. for each of the documents that aren't complete, we get ready to batch an update that sets `complete = true`
+4. once we're done, we commit our batch update, and things work out!
+
+Take a peek:
+
+![gif of done all button working](./images/07-working-done-all.gif)
+
+Voila!
+
+And with that, **we've completely removed our reliance on global state**! Instead of keeping track of the to-dos in memory, we perform **all of our operations with Firestore**. In particular, you'll note that you and a friend can both use the same to-do list, with great syncing. We did it!
+
+Firestore supports multiple queries and more complex ones too! If you're interested, I'd recommend that you [check out the docs](https://firebase.google.com/docs/firestore/query-data/queries)!
+
+As a quick recap, we:
+
+* learned how to use `.where()` to perform a simple query
+* used a batch `.update()` write operation
+
+This is it for the main content of the workshop! If you want to check the final code, [take a look at the checkpoint](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/final-checkpoint)!
+
 ## Conclusion and Next Steps
+
+Congratulations! Together, we converted our client-only to-do list to one that uses Firestore completely, and works with multiple users! In particular, we covered quite a bit:
+
+* creating and importing a Firebase project with Firestore
+* understanding Firestore's data structures (collections)
+* simple Create, Read, Update, and Delete operations (with `.set()`, `.get()`, `.update()`, and `.delete()` respectively)
+* using `.onSnapshot()` as a listener
+* batching operations with `.batch()`
+* querying data with `.where()`
+
+This should give you a great foundation to start using Firestore on your project too!
+
+There's much more you can do with Firestore. Some things that we didn't get to cover in this workshop:
+
+* [ordering and limiting data](https://firebase.google.com/docs/firestore/query-data/order-limit-data)
+* [paginating (splitting up) data reads](https://firebase.google.com/docs/firestore/query-data/query-cursors)
+* [persistent offline data](https://firebase.google.com/docs/firestore/manage-data/enable-offline)
+* secure data access with [Firestore security rules](https://firebase.google.com/docs/firestore/security/get-started)
+
+Firebase also has many other useful solutions for hackathon projects! Some convenient ones include:
+
+* [Firebase Authentication](https://firebase.google.com/docs/auth/web/start), to manage user account creation, log in, and SSO with other services (Google, Facebook, Apple, etc.)
+* [Firebase Hosting](https://firebase.google.com/docs/hosting/quickstart) to deploy and host your project!
+* [Firebase CLoud Functions](https://firebase.google.com/docs/functions/get-started), a lambda-like utility that lets you create small backend-like functionality without deploying a backend!
+
+We hope you found this tutorial helpful! If you're still confused, have any questions, or want to learn more, the mentors at QWER Hacks are your resource! I (Matt) will be around, as well as many other qualified and super friendly mentors. Feel free to reach out to us and say hi, we'd love to help!!
+
+Good luck hacking, we know you're going to kill it :)
 
 ## Licensing, Attribution, and Resources
 

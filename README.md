@@ -1,6 +1,8 @@
-# qwerhacks-21-workshops
+# 🏳️‍🌈 QWER Hacks '21 Workshops (React, Firebase, Education Track)
 
-🏳️‍🌈 notes, code, and links for the workshops i ran @ QWER Hacks '21 (react, firebase, education track)! this is still a WIP as matt finishes writing, recording, and editing the content. stay tuned!
+Hey there! These are written notes, code demos, and video links for the workshops I (Matt, he/him) ran at QWER Hacks '21 - on React, Firebase, and the Education Track! Feel free to poke around if you're interested in more!
+
+If you've got any questions, feel free to ping me - either as a mentor in the hackathon, or in general by email at [matt@matthewwang.me](mailto:matt@matthewwang.me).
 
 ## Table of Contents
 
@@ -38,27 +40,25 @@ Some bonus content! Feel free to check these out if they interest you, but you m
 
 * [Should I use React in my hackathon project?](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/should-i-use-react)
 * Classes vs Hooks in React
-* The `useEffect` hook
 * Some Useful React Resources (written)
 
 ### Firebase (Cloud Firestore)
 
-The "actual" workshop; here, we create a simple vanilla JS app and integrate Firebase. Similar to the React videos, the workshop is broken up into small chunks!
+The "actual" workshop; here, we take a simple vanilla JS app and integrate Firebase. Similar to the React videos, the workshop is broken up into small chunks!
 
 0. [Setting up Firestore and the Firebase Console](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#setting-up-firestore-and-the-firebase-console)
 1. [Basic Data Operatins (CRUD) in Firestore](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#basic-data-operations-crud-in-firestore):
     * [Creating Sample Data](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#creating-sample-data) and [Reading it](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#basic-read-operations)
     * Programatically [Creating](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#creating-data-programatically), [Deleting](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#deleting-data), and [Updating](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#updating-data) Data
-2. Cool Tricks with Firestore
+2. [Cool Tricks with Firestore](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#cool-tricks-with-firestore-listeners-transactions-querying)
     * [Listeners](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#listeners)
     * [Batch Writes](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#batch-writes)
-    * Querying and Ordering
-    * Transactions
+    * [Querying](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#querying)
 
 And some extra goodies:
 
 * Cloud Firestore versus Realtime Database
-* Using Firebase with React: the `useEffect` hook (do the React one first!)
+* Using Firebase with React: the `useEffect` hook
 * Some other cool Firebase products (written)
 
 ### Education Track
