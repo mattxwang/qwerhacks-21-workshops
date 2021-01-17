@@ -99,6 +99,8 @@ export default ComposeTweet;
 
 ```jsx
 // src/components/Tweet.js
+import {useState} from 'react';
+
 function Tweet(props) {
   const tweetStyle = {
     border: "1px solid white",

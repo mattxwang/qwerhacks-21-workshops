@@ -39,7 +39,8 @@ The React 101 core workshop; this is what you need to get your project up and ru
 Some bonus content! Feel free to check these out if they interest you, but you might not need them for your project.
 
 * [Should I use React in my hackathon project?](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/should-i-use-react)
-* Classes vs Hooks in React
+* Using Firestore with React: the `useEffect` hook
+* Classes vs Hooks in React (written)
 * Some Useful React Resources (written)
 
 ### Firebase (Cloud Firestore)
@@ -58,7 +59,7 @@ The "actual" workshop; here, we take a simple vanilla JS app and integrate Fireb
 And some extra goodies:
 
 * Cloud Firestore versus Realtime Database
-* Using Firebase with React: the `useEffect` hook
+* Using Firestore with React: the `useEffect` hook
 * Some other cool Firebase products (written)
 
 ### Education Track
