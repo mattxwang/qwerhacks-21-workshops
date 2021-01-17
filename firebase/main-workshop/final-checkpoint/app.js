@@ -92,8 +92,21 @@ const onNahClick = (id) => {
 }
 
 // completes all the todos!
+// now with firestore!
 const onDoneAll = () => {
-  globalTodos = completeAllTodos(globalTodos);
+  const batch = db.batch();
+  db.collection("todos")
+    .where("complete", "==", false)
+    .get()
+    .then((snapshot) => {
+      snapshot.docs.forEach((doc) => {
+        const todoRef = db.collection("todos").doc(doc.id)
+        batch.update(todoRef, {"complete": true})
+      })
+    })
+    .then(() => batch.commit()
+      .catch((error) => console.error("Error on batch write: ", error)))
+    .catch((error) => console.error("Error getting documents: ", error));
 }
 
 // resets (deletes) all todos!
