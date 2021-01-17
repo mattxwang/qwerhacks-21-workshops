@@ -33,6 +33,8 @@ Note: **this workshop does not cover styling in-depth**. The focus is to create 
 
 ## Hello World with React and Create React App
 
+In this workshop, **I assume you've already installed Node.js on your computer**. If you have not, **please do the "[Setting up Node.js and a quick project tour](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/node-setup-and-tour)" workshop first**.
+
 ### Setting Everything Up
 
 Today, we'll be using React to create a (meh-looking) Twitter clone, which is a good example of a frontend application. We're also going to use a library called [Create React App](https://github.com/facebook/create-react-app), which makes developing React apps *really* easy.
@@ -948,7 +950,7 @@ Note: this section *does not* rely on any previous section, but it makes the mos
 Okay, so you've got a wonderful React app. How can we let everyone in the world see how awesome it is? Well, there are quite a few approaches, but we'll use a **continuous deployment** pipeline involving GitHub and Netlify. The advantages of this pipeline are:
 
 1. it's free!
-2. once you set it up, you don't have to do anything thing else!
+2. once you set it up, you don't have to do anything else!
 
 Those both sound great to me! Let's get started.
 
@@ -967,13 +969,13 @@ If you haven't heard of GitHub before, it's a platform (on top of `git`) that ma
 
 Today, we aren't going to be doing anything too complicated. First, let's make a new repository on GitHub. We already have some code, so don't add a `README` or a `.gitignore`:
 
-TODO IMAGE
+![screenshot of the github create wizard, with a project name and no other checked boxes](./images/07-github-create.png)
 
 Now, we'll be on a page like this:
 
-TODO IMAGE
+![screenshot of the new repository prompt, with several possible options for a new command](./images/07-github-new-repo.png)
 
-You may not know it, but we actually already have a repository set up! Head to our `qwer-hacks` folder in the shell. First, if you've made any changes, do:
+You may not know it, but we actually already have a repository set up! So, we're going to follow the instructions in "push an existing repository from the command line". Head to our `qwer-hacks` folder in the shell. First, if you've made any changes, do:
 
 ```sh
 $ git add .
@@ -987,12 +989,16 @@ Not sure what these do? Check out ACM-W's git workshop TODO!
 Now, we'll set the remote for this repository, and push - just like GitHub told us:
 
 ```sh
-TODO
+git remote add origin git@github.com:malsf21/qwerhacks-test.git
+git branch -M main
+git push -u origin main
 ```
+
+make sure to replace `git@github.com:malsf21/qwerhacks-test.git` with your repository information - it should be the first line of the "...or push an existing repository from the command line" section!
 
 Awesome! If we head to GitHub, we'll see that our code is in the repository:
 
-TODO IMAGE
+![screenshot of repository, now with code](./images/07-github-new-repo.png)
 
 We're ready to move on to Netlify.
 
@@ -1002,17 +1008,19 @@ Back in my day, CD wasn't this easy! But Netlify makes things *super duper* conv
 
 First, head to [Netlify's website](https://www.netlify.com/). You can log in with GitHub, which is probably the most convenient option.
 
-Then, click "New site from Git"; then, find your repository and select it:
+Then, click "New site from Git"; select GitHub, then, find your repository and select it:
 
-TODO
+![screenshot of netlify wizard, selecting GitHub as our CD provider](./images/07-netlify-new-repo.png)
 
-Netlify is pretty smart, so it already knows what to do; just hit next on this page:
+![screenshot of netlify wizard, selecting the appropriate repository](./images/07-netlify-new-repo.png)
 
-TODO
+Netlify is pretty smart, so it already knows what to do; just hit "deploy site" on this page (your build command may be `npm run build` instead, that's fine too!)
 
-And ... that was it! Insane, right? Netlify will start building your project; once it's ready, you should be able to go to the URL it provided and see your app in action:
+![screenshot of netlify wizard, with default npm/yarn build settings](./images/07-netlify-build-settings.png)
 
-TODO
+And ... that was it! Insane, right? Netlify will start building your project; once it's ready, you should be able to go to the URL it provided and see your app in action. It probably ends in `.netlify.app`, like in this screenshot:
+
+![screenshot of netlify app page, with deployed url](./images/07-netlify-url.png)
 
 And that's it! Now, every time you make a change, all you need to do to deploy it is:
 
@@ -1038,7 +1046,29 @@ As a quick recap, we covered:
 
 ## Conclusion
 
-TODO
+Wow, that was a lot - but we did it! We covered **so much stuff**, including:
+
+* setting up node
+* using create-react-app to get a template
+* understanding JSX as "HTML with superpowers"
+* creating our own React components
+* using `props` and state (`useState()`) to manage interactivity
+* rendering lists of components with `.map()`
+* controlling form inputs and listening to events
+* conditional rendering with `?` and `&&`
+* pushing our app to GitHub, and deploying it with Netlify
+
+These fundamentals let you explore the whole wide world of React - and believe me, there's a lot! Here are a few places to continue from here:
+
+* really dive deep with React [by looking at the official docs](https://reactjs.org/docs/getting-started.html)
+* add routing to your app with [React Router](https://reactrouter.com/)
+* create simple graphs and visualizations with [react-plotly](https://plotly.com/javascript/react/)
+* implement beautiful animations with [react-anime](https://alain.xyz/libraries/react-anime)
+* integrate it with Firestore - I've done a follow-up workshop on this :)
+
+The world of React can be scary, and we're here to help! Many of our mentors have React experience (including me), so feel free to reach out to us during the hackathon if you've got questions! On top of that, you're always free to contact me if you've got any questions about this workshop.
+
+Good luck hacking! Y'all got this <3
 
 ## Licensing, Attribution, and Resources
 

@@ -32,7 +32,7 @@ The React 101 core workshop; this is what you need to get your project up and ru
 4. [Common React Patterns: Lists](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#lists)
 5. [Common React Patterns: Forms](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#forms-and-passing-down-functions)
 6. [Common React Patterns: Conditional Rendering](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#conditional-rendering)
-7. Using GitHub and Netlify to Deploy Your App For Free
+7. [Using GitHub and Netlify to Deploy Your App For Free](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#using-github-and-netlify-to-deploy-your-app-for-free)
 
 [Here's the YouTube playlist for the videos in order, for your convenience](https://www.youtube.com/playlist?list=PLPO7_kXilXFbpznCbpni9fjg7MKU7lyKS).
 
