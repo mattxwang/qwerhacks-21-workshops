@@ -1,6 +1,6 @@
 # 🏳️‍🌈 QWER Hacks '21 Workshops (React, Firebase, Education Track)
 
-Hey there! These are written notes, code demos, and video links for the workshops I (Matt, he/him) ran at QWER Hacks '21 - on React, Firebase, and the Education Track! Feel free to poke around if you're interested in more!
+Hey there! These are written notes, code demos, and video links for the workshops I (Matt, he/him) ran at QWER Hacks '21 - on React, Firebase, and the Education Track! Feel free to poke around if you're interested!
 
 If you've got any questions, feel free to ping me - either as a mentor in the hackathon, or in general by email at [matt@matthewwang.me](mailto:matt@matthewwang.me).
 
@@ -25,7 +25,7 @@ This repository has a lot of stuff going on! For your convenience, here are all 
 
 The React 101 core workshop; this is what you need to get your project up and running, and learn the basics of React! This is broken up into bite-sized chunks, where each chunk is ~ 5-8 minutes.
 
-0. [Setting up Node.js and a quick project tour](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/node-setup-and-tour)
+0. [Setting up Node.js and a quick project tour](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/node-setup-and-tour) (written)
 1. [Hello World with React and Create React App](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#hello-world-with-react-and-create-react-app)
 2. [Creating Your First Component](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#creating-your-first-component)
 3. [Hooks and State in React](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#hooks-and-state-in-react)

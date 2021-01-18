@@ -1010,9 +1010,9 @@ First, head to [Netlify's website](https://www.netlify.com/). You can log in wit
 
 Then, click "New site from Git"; select GitHub, then, find your repository and select it:
 
-![screenshot of netlify wizard, selecting GitHub as our CD provider](./images/07-netlify-new-repo.png)
+![screenshot of netlify wizard, selecting GitHub as our CD provider](./images/07-netlify-github.png)
 
-![screenshot of netlify wizard, selecting the appropriate repository](./images/07-netlify-new-repo.png)
+![screenshot of netlify wizard, selecting the appropriate repository](./images/07-netlify-github-repo.png)
 
 Netlify is pretty smart, so it already knows what to do; just hit "deploy site" on this page (your build command may be `npm run build` instead, that's fine too!)
 

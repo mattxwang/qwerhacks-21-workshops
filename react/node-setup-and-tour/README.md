@@ -1,6 +1,6 @@
 # Setting Up Node, and a Tour
 
-In this mini-workshop, we'll cover three things:
+In this (writte-only) mini-workshop, we'll cover three things:
 
 1. Briefly, what is Node?
 2. How can we set up Node on our computer?
