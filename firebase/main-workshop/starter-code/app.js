@@ -127,3 +127,4 @@ const handleTodoInput = (event) => {
 todoInput.onkeypress = handleTodoInput;
 doneAll.onclick = onDoneAll;
 nahAll.onclick = onNahAll;
+regenerateTodos();
