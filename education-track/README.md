@@ -1,6 +1,8 @@
 # Education Track Primer
 
-This README is a generally-accurate script for Matt's video on the **Education Track**, where Matt introduces the track, mentions some (hopefully) helpful advice and tips for your project, and goes over a previous submission!
+This README is a generally-accurate script for [Matt's video on the **Education Track**](https://www.youtube.com/watch?v=KhtwVRjKosg), where Matt introduces the track, mentions some (hopefully) helpful advice and tips for your project, and goes over a previous submission!
+
+This script is close to (but not quite) a word-for-word transcription of the [accompanying video](https://www.youtube.com/watch?v=KhtwVRjKosg). Either resource is fine!
 
 ## Introduction
 

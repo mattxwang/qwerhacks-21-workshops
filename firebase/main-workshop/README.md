@@ -1,11 +1,11 @@
-# React 101, The Main Firebase Workshop
+# Firestore 101, The Main Firestore Workshop
 
-This README contains the notes for the entire main Firebase workshop, where **we make a client-side todo list app persistent and multi-user**. It is split up into several byte-sized chunks:
+This README contains the notes for the entire main Firebase/Firestore workshop, where **we make a client-side todo list app persistent and multi-user**. It is split up into several byte-sized chunks:
 
 0. What is Firebase/Firestore and Demo Code Tour
 1. Setting up Firestore and the Firebase Console
 2. Creating, Reading, Updating, and Deleting Data with Firestore
-3. Listeners, Transactions, Querying
+3. Cool Tricks with Firestore: Listeners, Batched Writes, Querying
 
 You don't need to be an HTML/CSS/JS pro to do this workshop, but a passing familarity is recommended.
 
@@ -29,7 +29,7 @@ This workshop is meant to be web framework agnostic, so we implement everything 
   * [Creating Data Programatically](#creating-data-programatically)
   * [Deleting Data](#deleting-data)
   * [Updating Data](#updating-data)
-* [Cool Tricks with Firestore: Listeners, Transactions, Querying](#cool-tricks-with-firestore-listeners-transactions-querying)
+* [Cool Tricks with Firestore: Listeners, Batched Writes, Querying](#cool-tricks-with-firestore-listeners-batched-writes-querying)
   * [Listeners](#listeners)
   * [Batched Writes](#batched-writes)
   * [Querying](#querying)
@@ -493,7 +493,7 @@ As a quick recap, this covers:
 
 **Checkpoint 4**: [checkpoint code](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/04-checkpoint)
 
-## Cool Tricks with Firestore: Listeners, Transactions, Querying
+## Cool Tricks with Firestore: Listeners, Batched Writes, Querying
 
 Now that we've nailed the basic CRUD operations, I think we should take a look at some of the cooler features that Firestore offers. Each of these can make your project just *that* much more powerful! We'll also use this as an opportunity to polish off the rest of our app's functionality.
 
