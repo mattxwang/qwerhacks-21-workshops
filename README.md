@@ -29,9 +29,9 @@ The React 101 core workshop; this is what you need to get your project up and ru
 1. [Hello World with React and Create React App](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#hello-world-with-react-and-create-react-app)
 2. [Creating Your First Component](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#creating-your-first-component)
 3. [Hooks and State in React](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#hooks-and-state-in-react)
-4. [Common React Patterns: Lists](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#lists)
-5. [Common React Patterns: Forms](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#forms-and-passing-down-functions)
-6. [Common React Patterns: Conditional Rendering](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#conditional-rendering)
+4. [Lists](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#lists)
+5. [Forms](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#forms-and-passing-down-functions)
+6. [Conditional Rendering](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#conditional-rendering)
 7. [Using GitHub and Netlify to Deploy Your App For Free](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#using-github-and-netlify-to-deploy-your-app-for-free)
 
 [Here's the YouTube playlist for the videos in order, for your convenience](https://www.youtube.com/playlist?list=PLPO7_kXilXFbpznCbpni9fjg7MKU7lyKS).
@@ -51,7 +51,7 @@ The "actual" workshop; here, we take a simple vanilla JS app and integrate Fireb
     * Programatically [Creating](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#creating-data-programatically), [Deleting](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#deleting-data), and [Updating](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#updating-data) Data
 2. [Cool Tricks with Firestore](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#cool-tricks-with-firestore-listeners-transactions-querying)
     * [Listeners](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#listeners)
-    * [Batch Writes](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#batch-writes)
+    * [Batched Writes](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#batched-writes)
     * [Querying](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#querying)
 
 And an extra goodie:
