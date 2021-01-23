@@ -11,6 +11,7 @@ If you've got any questions, feel free to ping me - either as a mentor in the ha
   * [Firebase (Cloud Firestore)](#firebase-cloud-firestore)
   * [Education Track](#education-track)
 * [FAQs](#faqs)
+  * [Where can I find videos?](#where-can-i-find-videos)
   * [What do I need to know to take X workshop?](#what-do-i-need-to-know-to-take-x-workshop)
   * [I'm a bit stuck on my project during the hackathon. Can I get help?](#im-a-bit-stuck-on-my-project-during-the-hackathon-can-i-get-help)
   * [I've got a question on a topic that's not directly covered in a tutorial. Where should I look for help?](#ive-got-a-question-on-a-topic-thats-not-directly-covered-in-a-tutorial-where-should-i-look-for-help)
@@ -66,6 +67,17 @@ And an extra goodie:
 I did the video intro for the education track! You [watch the video](https://www.youtube.com/watch?v=KhtwVRjKosg) or read [a rough outline of my script](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/education-track).
 
 ## FAQs
+
+### Where can I find videos?
+
+There are two places you can find videos of the workshop! The first is on the Tikkl page for hackers (you would've received these links when you registered); the workshops are livestreamed at certain times in the day.
+
+The second is on ACM at UCLA's YouTube channel. In particular,
+
+* [The React 101 playlist](https://www.youtube.com/playlist?list=PLPO7_kXilXFbpznCbpni9fjg7MKU7lyKS)
+* [The Firestore 101 playlist](https://www.youtube.com/playlist?list=PLPO7_kXilXFb0_hrPKxlx-UEhZHiiTEWY)
+* [The Education Track video](https://www.youtube.com/watch?v=KhtwVRjKosg)
+
 
 ### What do I need to know to take X workshop?
 
