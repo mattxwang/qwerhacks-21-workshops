@@ -4,7 +4,7 @@ This README contains a bonus workshop that combines React and Firestore to creat
 
 The main focus of this workshop is using the `useEffect` hook to allow for Firestore operations as "side effects", and reconfiguring the state in the `App` component to rely completely on Cloud Firestore.
 
-This file is broken up into several pieces, but the content is all filmed in one-shot.
+This file is broken up into several pieces, but the content is all filmed in one-shot. [Here's the video, if you want to follow along!](https://www.youtube.com/watch?v=gSlGbgk54sM)
 
 ## Table of Contents
 

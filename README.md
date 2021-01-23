@@ -55,6 +55,8 @@ The "actual" workshop; here, we take a simple vanilla JS app and integrate Fireb
     * [Batched Writes](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#batched-writes)
     * [Querying](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#querying)
 
+[Here's the YouTube playlist for the videos in order, for your convenience](https://www.youtube.com/playlist?list=PLPO7_kXilXFb0_hrPKxlx-UEhZHiiTEWY).
+
 And an extra goodie:
 
 * [Using Firestore with React: the `useEffect` hook](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/with-react)

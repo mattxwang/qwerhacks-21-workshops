@@ -10,6 +10,8 @@ This README contains the notes for the entire main React workshop, **where we ma
 
 You don't need to be an HTML/CSS/JS pro to do this workshop, but a passing familarity is recommended. If you don't have Node.js on your computer though, **we do need that** - head to "[Setting up Node.js and a quick project tour](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/node-setup-and-tour)" for more info there.
 
+[Here's a playlist of the videos, if you'd like to follow along!](https://www.youtube.com/watch?v=4vYG4Q2kOYs&list=PLPO7_kXilXFbpznCbpni9fjg7MKU7lyKS)
+
 For every section beyond the first one, we'll also have a corresponding **checkpoint** that has all the code you need to do that section. If you fall behind or are confused, peep the checkpoints!
 
 Note: **this workshop does not cover styling in-depth**. The focus is to create a working **interactive web-app**, but not necessarily the *prettiest* one. Beauty is in the eye of the beholder, after all!

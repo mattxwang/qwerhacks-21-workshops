@@ -9,6 +9,8 @@ This README contains the notes for the entire main Firebase/Firestore workshop, 
 
 You don't need to be an HTML/CSS/JS pro to do this workshop, but a passing familarity is recommended.
 
+[Here's a link to the playlist, follow along if you'd like!](https://www.youtube.com/watch?v=gSlGbgk54sM&list=PLPO7_kXilXFb0_hrPKxlx-UEhZHiiTEWY)
+
 For every section, we'll also have a corresponding **checkpoint** that has all the code you need to do that section. If you fall behind or are confused, peep the checkpoints! We also start with some template code (as this workshop isn't about HTML/CSS/JS), so please check that out first.
 
 This workshop is meant to be web framework agnostic, so we implement everything in vanilla JavaScript. Everything we cover is generally extendable to any frontend framework. We cover React in a bonus part of the workshop!
