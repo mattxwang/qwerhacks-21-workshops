@@ -1,6 +1,6 @@
 # 🏳️‍🌈 QWER Hacks '21 Workshops (React, Firebase, Education Track)
 
-Hey there! These are written notes, code demos, and video links for the workshops I (Matt, he/him) ran at [QWER Hacks '21](https://www.qwerhacks.com/) - on React, Firebase, and the Education Track! Feel free to poke around if you're interested!
+Hey there! These are written notes, code demos, and video links for the workshops I ([Matt](https://matthewwang.me), he/him) ran at [QWER Hacks '21](https://www.qwerhacks.com/) - on React, Firebase, and the Education Track! Feel free to poke around if you're interested!
 
 If you've got any questions, feel free to ping me - either as a mentor in the hackathon, or in general by email at [matt@matthewwang.me](mailto:matt@matthewwang.me).
 
@@ -90,7 +90,7 @@ Good question! Luckily for us, the internet has tons of great resources, includi
 
 ### Who is Matt?
 
-Glad you asked! I (Matt) am a third-year CS & Math-Econ major at UCLA, and the current president of [ACM Teach LA](https://teachla.uclaacm.com). I'm really passionate about education, technology, and their intersection - which is something that I love doing at QWER Hacks and Teach LA! I'm also particularly passionate about making tech a more diverse and welcoming place, which is an issue that definitely needs some work. I spend a lot of time working on EdTech, training developers, and doing mentorship - feel free to ask me about that!
+Glad you asked! I ([Matt](https://matthewwang.me)) am a third-year CS & Math-Econ major at UCLA, and the current president of [ACM Teach LA](https://teachla.uclaacm.com). I'm really passionate about education, technology, and their intersection - which is something that I love doing at QWER Hacks and Teach LA! I'm also particularly passionate about making tech a more diverse and welcoming place, which is an issue that definitely needs some work. I spend a lot of time working on EdTech, training developers, and doing mentorship - feel free to ask me about that!
 
 In terms of experience, I'm definitely not an absolute professional, but I've done quite a bit of web development over the years! I've worked with React in a variety of contexts - in a startup, in a mid-sized company, at a big tech company, and in personal projects. I've used Firebase (and Firestore) at ACM Teach LA and in personal projects. More broadly, I've done stuff all over the stack:
 
