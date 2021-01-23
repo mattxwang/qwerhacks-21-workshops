@@ -1,6 +1,6 @@
 # 🏳️‍🌈 QWER Hacks '21 Workshops (React, Firebase, Education Track)
 
-Hey there! These are written notes, code demos, and video links for the workshops I (Matt, he/him) ran at QWER Hacks '21 - on React, Firebase, and the Education Track! Feel free to poke around if you're interested!
+Hey there! These are written notes, code demos, and video links for the workshops I (Matt, he/him) ran at [QWER Hacks '21](https://www.qwerhacks.com/) - on React, Firebase, and the Education Track! Feel free to poke around if you're interested!
 
 If you've got any questions, feel free to ping me - either as a mentor in the hackathon, or in general by email at [matt@matthewwang.me](mailto:matt@matthewwang.me).
 
@@ -14,6 +14,7 @@ If you've got any questions, feel free to ping me - either as a mentor in the ha
   * [What do I need to know to take X workshop?](#what-do-i-need-to-know-to-take-x-workshop)
   * [I'm a bit stuck on my project during the hackathon. Can I get help?](#im-a-bit-stuck-on-my-project-during-the-hackathon-can-i-get-help)
   * [I've got a question on a topic that's not directly covered in a tutorial. Where should I look for help?](#ive-got-a-question-on-a-topic-thats-not-directly-covered-in-a-tutorial-where-should-i-look-for-help)
+  * [Who is Matt?](#who-is-matt)
 * [Resources and Thanks](#resources-and-thanks)
 * [Licensing](#licensing)
 
@@ -74,7 +75,7 @@ If the JavaScript portion of the React workshop confused you, it may be worth sp
 
 ### I'm a bit stuck on my project during the hackathon. Can I get help?
 
-Yup! More deets coming soon!
+Yup! QWER Hacks '21 is doing mentorship through Discord this year! If you need help, bop into voice chat or text channels - a mentor (or quite a few) will be there to help you out!
 
 ### I've got a question on a topic that's not directly covered in a tutorial. Where should I look for help?
 
@@ -83,7 +84,21 @@ Good question! Luckily for us, the internet has tons of great resources, includi
 * poking around the official docs: [here are React's](https://reactjs.org/docs/getting-started.html) (which are quite solid), and [here are Firestore's](https://firebase.google.com/docs/firestore).
 * skimming other tutorials: [React has a great official tutorial](https://reactjs.org/tutorial/tutorial.html), and [Firebase's](https://firebase.google.com/docs/web/setup) is alright too. [Tania Rascia has a great React tutorial too](https://www.taniarascia.com/getting-started-with-react/)!
 * use [StackOverflow](https://stackoverflow.com/)! There's no shame, and it's likely that many others have run into your problem too!
-* ask us! QWER Hacks has a mentor system; more info TBD.
+* ask us! QWER Hacks has a mentor system through Discord, and quite a few of the mentors are experienced in React, Firebase/Firestore, and web development!
+
+### Who is Matt?
+
+Glad you asked! I (Matt) am a third-year CS & Math-Econ major at UCLA, and the current president of [ACM Teach LA](https://teachla.uclaacm.com). I'm really passionate about education, technology, and their intersection - which is something that I love doing at QWER Hacks and Teach LA! I'm also particularly passionate about making tech a more diverse and welcoming place, which is an issue that definitely needs some work. I spend a lot of time working on EdTech, training developers, and doing mentorship - feel free to ask me about that!
+
+In terms of experience, I'm definitely not an absolute professional, but I've done quite a bit of web development over the years! I've worked with React in a variety of contexts - in a startup, in a mid-sized company, at a big tech company, and in personal projects. I've used Firebase (and Firestore) at ACM Teach LA and in personal projects. More broadly, I've done stuff all over the stack:
+
+* web design with Photoshop, Figma
+* frontend javascript: React, Angular, jQuery, typical vanilla JS, many libraries!
+* backend-adjacent: webservers with Python (Flask, Django), PHP, Java
+* databases: SQL, Firebase/Firestore/RTDB, some MongoDB
+* misc: git(hub), CI/CD (GitHub Actions, Netlify, Travis CI, AppVeyor), Electron
+
+If you've got questions about these things, or more broadly anything related to web development, feel free to hit me up through the mentor channels at QWER Hacks!
 
 ## Resources and Thanks
 
