@@ -1,10 +1,10 @@
 # Firebase 101 Workshop Checkpoint #1
 
-At this point, you should've completed ["Basic Read Operations"](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#basic-read-operations).
+At this point, you should've completed ["Basic Read Operations"](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop#basic-read-operations).
 
 ## Files
 
-We assume that you've set up Firestore as described in the ["Setting up Firestore and the Firebase Console"](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#setting-up-firestore-and-the-firebase-console).
+We assume that you've set up Firestore as described in the ["Setting up Firestore and the Firebase Console"](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop#setting-up-firestore-and-the-firebase-console).
 
 We do not touch `style.css` in this workshop! And `index.html` is the same for every single section.
 

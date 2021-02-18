@@ -84,7 +84,7 @@ In particular, our goal with Firestore is to remove all dependence on global sta
 
 It's a bit tricky to explain how to use Firestore without an existing app. Since the scope of this workshop *is not how to make a web-app*, I'm not going to directly cover it in this workshop.
 
-Instead, we're going to start with a sample app, which in this case, is a very barebones to-do list. You can [play around with a live demo here](https://raw.githack.com/malsf21/qwerhacks-21-workshops/main/firebase/main-workshop/starter-code/index.html), or take a peek at the [starter-code folder and README](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/starter-code). In the video for this section, I also briefly step through the code - but it's not too important for the meat of this workshop.
+Instead, we're going to start with a sample app, which in this case, is a very barebones to-do list. You can [play around with a live demo here](https://raw.githack.com/mattxwang/qwerhacks-21-workshops/main/firebase/main-workshop/starter-code/index.html), or take a peek at the [starter-code folder and README](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop/starter-code). In the video for this section, I also briefly step through the code - but it's not too important for the meat of this workshop.
 
 A few notes about this app:
 
@@ -309,11 +309,11 @@ As a quick recap, we:
 * used `.get()` to get a snapshot of our data, with promises
 * used our resulting data to generate our to-do
 
-**Checkpoint 1**: [code checkpoint](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/01-checkpoint)
+**Checkpoint 1**: [code checkpoint](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop/01-checkpoint)
 
 ### Creating Data Programatically
 
-*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/01-checkpoint).
+*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop/01-checkpoint).
 
 Now that we've read some data to our database, we want to be able to write data to it too! In particular, when we create a todo, we should add it to our Firestore database.
 
@@ -377,11 +377,11 @@ As a quick recap, we covered:
 * using the `.set()` function on a document to create it, with some accompanying data
 * performing dependency actions synchronously, i.e. regenerating the todos *after* creating one
 
-**Checkpoint 2**: [code checkpoint](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/02-checkpoint)
+**Checkpoint 2**: [code checkpoint](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop/02-checkpoint)
 
 ### Deleting Data
 
-*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/02-checkpoint).
+*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop/02-checkpoint).
 
 Okay, so now we can create and read todos. Let's first deal with deleting them.
 
@@ -422,11 +422,11 @@ As a quick recap, we covered:
 * again, the importance of chaining dependent synchronous actions
 * deleting items in the firestore console
 
-**Checkpoint 3**: [checkpoint code](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/03-checkpoint)
+**Checkpoint 3**: [checkpoint code](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop/03-checkpoint)
 
 ### Updating Data
 
-*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/03-checkpoint).
+*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop/03-checkpoint).
 
 Last but not least, let's implement the "done" feature for our app. You might guess what we already want to do - find the function that we've written to toggle the single item, and instead of updating the global state, adjust the field in the firestore document.
 
@@ -493,7 +493,7 @@ As a quick recap, this covers:
 
 * using `.update()` on a document (instead of `.set()`)
 
-**Checkpoint 4**: [checkpoint code](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/04-checkpoint)
+**Checkpoint 4**: [checkpoint code](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop/04-checkpoint)
 
 ## Cool Tricks with Firestore: Listeners, Batched Writes, Querying
 
@@ -501,7 +501,7 @@ Now that we've nailed the basic CRUD operations, I think we should take a look a
 
 ### Listeners
 
-*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/04-checkpoint).
+*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop/04-checkpoint).
 
 One thing you'll notice is that if a change happens outside of our app, we have to refresh our app to see the change happen. You can do this by having two copies of our app open, or changing the variable in the console. If you want a todo app that can be shared between teams (like Google Docs), then this is a must-have feature.
 
@@ -545,11 +545,11 @@ As a quick recap, we covered:
 
 * using `.onSnapshot` and its two arguments: the function called on every change, and the error function
 
-**Checkpoint 5**: [checkpoint code](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/05-checkpoint)
+**Checkpoint 5**: [checkpoint code](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop/05-checkpoint)
 
 ### Batched Writes
 
-*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/05-checkpoint).
+*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop/05-checkpoint).
 
 There are many issues with databases that Firebase aims to solve. One is: how do we make sure that multiple interactions happen at the same time, given that each operation can only happen one-after-the-other? In our case, this is relevant for the "nah all" button: we want to delete all of the todos at once, rather than sending a bajillion requests.
 
@@ -607,11 +607,11 @@ As a quick recap, we:
 * added items to the queue with `batch.delete()` or (`batch.update()`, `batch.set()`)
 * executed the batch with `batch.commit()`
 
-**Checkpoint 6**: [checkpoint code](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/06-checkpoint)
+**Checkpoint 6**: [checkpoint code](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop/06-checkpoint)
 
 ### Querying
 
-*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/06-checkpoint).
+*We'll be building off the previous section*; [check out the checkpoint if you haven't already!](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop/06-checkpoint).
 
 We have one last operation to finish, which is our "done all" button. There are quite a few ways to approach this problem, but one way to do it is with a **query**. Queries are ways we can ask our database (in this case, Firestore) to give us only *certain types* of data. This is a really common operation in many applications: give us tweets from a certain time period, people that you're friends with, songs by girl in red.
 
@@ -670,7 +670,7 @@ As a quick recap, we:
 * learned how to use `.where()` to perform a simple query
 * used a batch `.update()` write operation
 
-This is it for the main content of the workshop! If you want to check the final code, [take a look at the checkpoint](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop/final-checkpoint)!
+This is it for the main content of the workshop! If you want to check the final code, [take a look at the checkpoint](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop/final-checkpoint)!
 
 ## Conclusion and Next Steps
 
@@ -706,7 +706,7 @@ Good luck hacking, we know you're going to kill it :)
 
 [Matt](https://matthewwang.me) has taught some variant of this workshop (among other React-related ones) several times before; past iterations include:
 
-* [QWER Hacks 2020's Intro to Web Dev with React and Firebase](https://github.com/malsf21/qwerhacks-web-dev-workshop)
+* [QWER Hacks 2020's Intro to Web Dev with React and Firebase](https://github.com/mattxwang/qwerhacks-web-dev-workshop)
 * [Learning Lab Crash Course: Intro to Firebase](https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/18-firebase)
 
 He's also got a few favourite external sources, including:
@@ -714,6 +714,6 @@ He's also got a few favourite external sources, including:
 * [the official Firestore docs](https://firebase.google.com/docs/firestore)
 * Reed Barger's [Firestore Tutorial](https://www.freecodecamp.org/news/the-firestore-tutorial-for-2020-learn-by-example/) on freeCodeCamp
 
-The contents of this workshop (like the rest of this repository) are dual-licensed under the [MIT License](https://github.com/malsf21/qwerhacks-21-workshops/blob/main/LICENSE) and the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/); feel free to use whichever license suits your purpose better.
+The contents of this workshop (like the rest of this repository) are dual-licensed under the [MIT License](https://github.com/mattxwang/qwerhacks-21-workshops/blob/main/LICENSE) and the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/); feel free to use whichever license suits your purpose better.
 
 I'd love to hear if you found this helpful, or if you have any suggestions! Please send me an email at [matt@matthewwang.me](mailto:matt@matthewwang.me).

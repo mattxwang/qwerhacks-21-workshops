@@ -1,6 +1,6 @@
 # Using Firestore with React: the `useEffect` hook
 
-This README contains a bonus workshop that combines React and Firestore to create a full-stack-ish web app. We transform the Twitter clone we built in the [React 101 workshop](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop) with the skills we picked up in the [Cloud Firestore workshop](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop). In particular, **we assume you have done both of these workshops**.
+This README contains a bonus workshop that combines React and Firestore to create a full-stack-ish web app. We transform the Twitter clone we built in the [React 101 workshop](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/main-workshop) with the skills we picked up in the [Cloud Firestore workshop](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop). In particular, **we assume you have done both of these workshops**.
 
 The main focus of this workshop is using the `useEffect` hook to allow for Firestore operations as "side effects", and reconfiguring the state in the `App` component to rely completely on Cloud Firestore.
 
@@ -22,13 +22,13 @@ This file is broken up into several pieces, but the content is all filmed in one
 
 ### Remarks
 
-**Warning**: we assume that you've already done both the [React 101 workshop](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop) and the [Cloud Firestore workshop](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop). We will **skip over things done in these workshops, so please take a look at them first!!**
+**Warning**: we assume that you've already done both the [React 101 workshop](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/main-workshop) and the [Cloud Firestore workshop](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop). We will **skip over things done in these workshops, so please take a look at them first!!**
 
-We will start with the code at the end of the react workshop; for your convenience, we've included it in the [`starter-code`](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/with-react/starter-code) folder of this workshop.
+We will start with the code at the end of the react workshop; for your convenience, we've included it in the [`starter-code`](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/with-react/starter-code) folder of this workshop.
 
 ### Creating and Configuring Firebase, Firestore
 
-First, we need to set up Firebase and Firestore again. Generally, you'll just follow the [Setting up Firestore and the Firebase Console](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#setting-up-firestore-and-the-firebase-console) tutorial: register a firebase web app, then set up firestore. We're just going to do one step differently.
+First, we need to set up Firebase and Firestore again. Generally, you'll just follow the [Setting up Firestore and the Firebase Console](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop#setting-up-firestore-and-the-firebase-console) tutorial: register a firebase web app, then set up firestore. We're just going to do one step differently.
 
 In that tutorial, we were given some config files and CDN links; what we did was put this:
 
@@ -229,7 +229,7 @@ As a quick recap, we:
 * uses the effect hook to call `setupFirestoreListener()` only once
 * updates `<Tweet />` renders to use a `key`
 
-**Checkpoint 1**: [code checkpoint](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/with-react/checkpoint-1)
+**Checkpoint 1**: [code checkpoint](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/with-react/checkpoint-1)
 
 ### Creating Tweets
 
@@ -297,7 +297,7 @@ As a quick recap, we:
 * changed the `createTweet` function to send the new tweet to firestore instead
 * use `.orderBy` to order the rendered tweets by date published
 
-**Checkpoint 2**: [code checkpoint](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/with-react/checkpoint-2)
+**Checkpoint 2**: [code checkpoint](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/with-react/checkpoint-2)
 
 ### Updating Tweets and Refactoring
 
@@ -424,7 +424,7 @@ It's a bit slower than the instantaneous state update, especially because transa
 
 And that's it! We've completely converted our existing state-based application to now also use Firestore.
 
-The last checkpoint is [here, if you'd like](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/with-react/final-checkpoint).
+The last checkpoint is [here, if you'd like](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/with-react/final-checkpoint).
 
 ## Conclusion and Next Steps
 
@@ -436,7 +436,7 @@ Hopefully, this helps! As always, please reach out to us if y'all have any quest
 
 [Matt](https://matthewwang.me) has taught some variant of this workshop (among other React-related ones) several times before; past iterations include:
 
-* [QWER Hacks 2020's Intro to Web Dev with React and Firebase](https://github.com/malsf21/qwerhacks-web-dev-workshop)
+* [QWER Hacks 2020's Intro to Web Dev with React and Firebase](https://github.com/mattxwang/qwerhacks-web-dev-workshop)
 * [Learning Lab Crash Course: Intro to Firebase](https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/18-firebase)
 
 He's also got a few favourite external sources, including:
@@ -444,6 +444,6 @@ He's also got a few favourite external sources, including:
 * [the official Firestore docs](https://firebase.google.com/docs/firestore)
 * Reed Barger's [Firestore Tutorial](https://www.freecodecamp.org/news/the-firestore-tutorial-for-2020-learn-by-example/) on freeCodeCamp
 
-The contents of this workshop (like the rest of this repository) are dual-licensed under the [MIT License](https://github.com/malsf21/qwerhacks-21-workshops/blob/main/LICENSE) and the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/); feel free to use whichever license suits your purpose better.
+The contents of this workshop (like the rest of this repository) are dual-licensed under the [MIT License](https://github.com/mattxwang/qwerhacks-21-workshops/blob/main/LICENSE) and the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/); feel free to use whichever license suits your purpose better.
 
 I'd love to hear if you found this helpful, or if you have any suggestions! Please send me an email at [matt@matthewwang.me](mailto:matt@matthewwang.me).

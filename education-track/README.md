@@ -87,7 +87,7 @@ I'm **so excited** to see what y'all will build. Good luck hacking!
 
 ## Attribution
 
-The contents of this workshop (like the rest of this repository) are dual-licensed under the [MIT License](https://github.com/malsf21/qwerhacks-21-workshops/blob/main/LICENSE) and the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/); feel free to use whichever license suits your purpose better.
+The contents of this workshop (like the rest of this repository) are dual-licensed under the [MIT License](https://github.com/mattxwang/qwerhacks-21-workshops/blob/main/LICENSE) and the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/); feel free to use whichever license suits your purpose better.
 
 Many thanks to [Emmy](https://www.emmycao.com/) for letting us showcase her amazing hack from QWER Hacks 2020!
 

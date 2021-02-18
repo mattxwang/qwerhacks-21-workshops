@@ -1,10 +1,10 @@
 # Firebase 101 Workshop Checkpoint #6
 
-At this point, you should've completed ["Cool Tricks with Firestore: Batched Writes"](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#batched-writes).
+At this point, you should've completed ["Cool Tricks with Firestore: Batched Writes"](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop#batched-writes).
 
 ## Files
 
-We assume that you've set up Firestore as described in the ["Setting up Firestore and the Firebase Console"](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#setting-up-firestore-and-the-firebase-console).
+We assume that you've set up Firestore as described in the ["Setting up Firestore and the Firebase Console"](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop#setting-up-firestore-and-the-firebase-console).
 
 We do not touch `style.css` in this workshop! And `index.html` is the same for every single section.
 

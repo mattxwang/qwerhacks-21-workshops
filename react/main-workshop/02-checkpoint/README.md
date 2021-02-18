@@ -1,6 +1,6 @@
 # Workshop Checkpoint 2
 
-At this point, you should have finished the ["Hooks and State in React"](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#hooks-and-state-in-react) section of the workshop.
+At this point, you should have finished the ["Hooks and State in React"](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/main-workshop#hooks-and-state-in-react) section of the workshop.
 
 ## Edited Files
 

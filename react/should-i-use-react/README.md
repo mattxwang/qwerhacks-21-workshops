@@ -145,7 +145,7 @@ I hope you enjoyed this mini-workshop, and I hope it helped you with your hackin
 
 * at the hackathon!
 * on the interwebs, at [matt@matthewwang.me](mailto:matt@matthewwang.me)
-* [on GitHub](https://github.com/malsf21)
+* [on GitHub](https://github.com/mattxwang)
 
 Interested in learning more about React and how you can use it? Take a look at the walkthrough in this repository!
 
@@ -155,11 +155,11 @@ Good luck hacking! I know you'll do great!
 
 [Matt](https://matthewwang.me) has taught some variant of this workshop (among other React-related ones) several times before; past iterations include:
 
-* [QWER Hacks 2020's Intro to Web Dev with React and Firebase](https://github.com/malsf21/qwerhacks-web-dev-workshop)
+* [QWER Hacks 2020's Intro to Web Dev with React and Firebase](https://github.com/mattxwang/qwerhacks-web-dev-workshop)
 * [Learning Lab Crash Course: Intro to React](https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/07-intro-react)
 
 He'd also like to thank ACM Hack for Hackschool, which covers many intro to web development topics; he borrowed the BTS Twitter photos from their [Hackschool 2020, Intro to React Workshop](https://github.com/uclaacm/hackschool-f20/tree/main/session-7-intro-react).
 
-The contents of this workshop (like the rest of this repository) are dual-licensed under the [MIT License](https://github.com/malsf21/qwerhacks-21-workshops/blob/main/LICENSE) and the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/); feel free to use whichever license suits your purpose better.
+The contents of this workshop (like the rest of this repository) are dual-licensed under the [MIT License](https://github.com/mattxwang/qwerhacks-21-workshops/blob/main/LICENSE) and the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/); feel free to use whichever license suits your purpose better.
 
 I'd love to hear if you found this helpful, or if you have any suggestions! Please send me an email at [matt@matthewwang.me](mailto:matt@matthewwang.me).

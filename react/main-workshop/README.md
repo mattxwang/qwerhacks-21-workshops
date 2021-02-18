@@ -8,7 +8,7 @@ This README contains the notes for the entire main React workshop, **where we ma
 4. Common React Patterns: Lists, Forms, and Conditional Rendering
 5. Using GitHub and Netlify to Deploy Your App For Free
 
-You don't need to be an HTML/CSS/JS pro to do this workshop, but a passing familarity is recommended. If you don't have Node.js on your computer though, **we do need that** - head to "[Setting up Node.js and a quick project tour](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/node-setup-and-tour)" for more info there.
+You don't need to be an HTML/CSS/JS pro to do this workshop, but a passing familarity is recommended. If you don't have Node.js on your computer though, **we do need that** - head to "[Setting up Node.js and a quick project tour](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/node-setup-and-tour)" for more info there.
 
 [Here's a playlist of the videos, if you'd like to follow along!](https://www.youtube.com/watch?v=4vYG4Q2kOYs&list=PLPO7_kXilXFbpznCbpni9fjg7MKU7lyKS)
 
@@ -35,7 +35,7 @@ Note: **this workshop does not cover styling in-depth**. The focus is to create 
 
 ## Hello World with React and Create React App
 
-In this workshop, **I assume you've already installed Node.js on your computer**. If you have not, **please do the "[Setting up Node.js and a quick project tour](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/node-setup-and-tour)" workshop first**.
+In this workshop, **I assume you've already installed Node.js on your computer**. If you have not, **please do the "[Setting up Node.js and a quick project tour](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/node-setup-and-tour)" workshop first**.
 
 ### Setting Everything Up
 
@@ -54,7 +54,7 @@ What did we just do?
 
 * `npx create-react-app` is a command that creates a template application from [Create React App](https://github.com/facebook/create-react-app), which is a project boilerplate commonly used for React apps. It creates a folder (in this case, `qwer-hacks`), and installs a bunch of stuff in it!
 * `cd` is the terminal command that changes the folder you're in; here, we're entering the `qwer-hacks` folder that we just made.
-* `npm start` tells Node to "start" our project. More info in "[Setting up Node.js and a quick project tour](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/node-setup-and-tour)"
+* `npm start` tells Node to "start" our project. More info in "[Setting up Node.js and a quick project tour](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/node-setup-and-tour)"
 
 After running `npm start`, you should get a message like this:
 
@@ -941,7 +941,7 @@ A quick recap, we covered:
 * conditionally rendering with `?`
 * conditionally rendering with `&&`
 
-**Checkpoint 5:** [check out the code](./05-checkpoint). This is the final checkpoint! You can also view a full project codebase [here](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/with-react/starter-code).
+**Checkpoint 5:** [check out the code](./05-checkpoint). This is the final checkpoint! You can also view a full project codebase [here](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/with-react/starter-code).
 
 *Aside*: there's actually a different way that we could approach this, which is to refactor `ComposeTweet` into a generic `TextInput`-type component, and reuse the same component for the author name and tweet composition tasks. In fact, given our current project, this is likely what I would've done! But, if things got more complicated (e.g. you can add images to Tweets), then this approach wouldn't work as well.
 
@@ -991,12 +991,12 @@ Not sure what these do? Check out ACM-W's git workshop TODO!
 Now, we'll set the remote for this repository, and push - just like GitHub told us:
 
 ```sh
-git remote add origin git@github.com:malsf21/qwerhacks-test.git
+git remote add origin git@github.com:mattxwang/qwerhacks-test.git
 git branch -M main
 git push -u origin main
 ```
 
-make sure to replace `git@github.com:malsf21/qwerhacks-test.git` with your repository information - it should be the first line of the "...or push an existing repository from the command line" section!
+make sure to replace `git@github.com:mattxwang/qwerhacks-test.git` with your repository information - it should be the first line of the "...or push an existing repository from the command line" section!
 
 Awesome! If we head to GitHub, we'll see that our code is in the repository:
 
@@ -1066,7 +1066,7 @@ These fundamentals let you explore the whole wide world of React - and believe m
 * add routing to your app with [React Router](https://reactrouter.com/)
 * create simple graphs and visualizations with [react-plotly](https://plotly.com/javascript/react/)
 * implement beautiful animations with [react-anime](https://alain.xyz/libraries/react-anime)
-* integrate it with Firestore - we have a [follow-up workshop on this](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/with-react) :)
+* integrate it with Firestore - we have a [follow-up workshop on this](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/with-react) :)
 
 The world of React can be scary, and we're here to help! Many of our mentors have React experience (including me), so feel free to reach out to us during the hackathon if you've got questions! On top of that, you're always free to contact me if you've got any questions about this workshop.
 
@@ -1076,7 +1076,7 @@ Good luck hacking! Y'all got this <3
 
 [Matt](https://matthewwang.me) has taught some variant of this workshop (among other React-related ones) several times before; past iterations include:
 
-* [QWER Hacks 2020's Intro to Web Dev with React and Firebase](https://github.com/malsf21/qwerhacks-web-dev-workshop)
+* [QWER Hacks 2020's Intro to Web Dev with React and Firebase](https://github.com/mattxwang/qwerhacks-web-dev-workshop)
 * [Learning Lab Crash Course: Intro to React](https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/07-intro-react)
 * [Learning Lab Crash Course: Intermediate React](https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/09-intermediate-react-1)
 * [Learning Lab Crash Course: React Hooks](https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/11-react-hooks)
@@ -1088,6 +1088,6 @@ He's also got a few favourite external sources, including:
 * Tania Rascia's [React tutorial](https://www.taniarascia.com/getting-started-with-react/)
 * ACM Hack's [Hackschool session on React](https://github.com/uclaacm/hackschool-f20/tree/main/session-7-intro-react)
 
-The contents of this workshop (like the rest of this repository) are dual-licensed under the [MIT License](https://github.com/malsf21/qwerhacks-21-workshops/blob/main/LICENSE) and the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/); feel free to use whichever license suits your purpose better.
+The contents of this workshop (like the rest of this repository) are dual-licensed under the [MIT License](https://github.com/mattxwang/qwerhacks-21-workshops/blob/main/LICENSE) and the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/); feel free to use whichever license suits your purpose better.
 
 I'd love to hear if you found this helpful, or if you have any suggestions! Please send me an email at [matt@matthewwang.me](mailto:matt@matthewwang.me).

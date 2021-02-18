@@ -1,6 +1,6 @@
 # Workshop Checkpoint 1
 
-At this point, you should have finished the ["Creating Your First Component"](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#creating-your-first-component) section of the workshop.
+At this point, you should have finished the ["Creating Your First Component"](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/main-workshop#creating-your-first-component) section of the workshop.
 
 ## Edited Files
 

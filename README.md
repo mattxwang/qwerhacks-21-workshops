@@ -27,44 +27,44 @@ This repository has a lot of stuff going on! For your convenience, here are all 
 
 The React 101 core workshop; this is what you need to get your project up and running, and learn the basics of React! This is broken up into bite-sized chunks, where each chunk is ~ 5-8 minutes.
 
-0. [Setting up Node.js and a quick project tour](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/node-setup-and-tour) (written)
-1. [Hello World with React and Create React App](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#hello-world-with-react-and-create-react-app)
-2. [Creating Your First Component](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#creating-your-first-component)
-3. [Hooks and State in React](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#hooks-and-state-in-react)
-4. [Lists](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#lists)
-5. [Forms](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#forms-and-passing-down-functions)
-6. [Conditional Rendering](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#conditional-rendering)
-7. [Using GitHub and Netlify to Deploy Your App For Free](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#using-github-and-netlify-to-deploy-your-app-for-free)
+0. [Setting up Node.js and a quick project tour](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/node-setup-and-tour) (written)
+1. [Hello World with React and Create React App](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/main-workshop#hello-world-with-react-and-create-react-app)
+2. [Creating Your First Component](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/main-workshop#creating-your-first-component)
+3. [Hooks and State in React](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/main-workshop#hooks-and-state-in-react)
+4. [Lists](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/main-workshop#lists)
+5. [Forms](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/main-workshop#forms-and-passing-down-functions)
+6. [Conditional Rendering](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/main-workshop#conditional-rendering)
+7. [Using GitHub and Netlify to Deploy Your App For Free](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/main-workshop#using-github-and-netlify-to-deploy-your-app-for-free)
 
 [Here's the YouTube playlist for the videos in order, for your convenience](https://www.youtube.com/playlist?list=PLPO7_kXilXFbpznCbpni9fjg7MKU7lyKS).
 
 Some bonus content! Feel free to check these out if they interest you, but you might not need them for your project.
 
-* [Should I use React in my hackathon project?](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/should-i-use-react)
-* [Using Firestore with React: the `useEffect` hook](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/with-react)
+* [Should I use React in my hackathon project?](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/should-i-use-react)
+* [Using Firestore with React: the `useEffect` hook](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/with-react)
 
 ### Firebase (Cloud Firestore)
 
 The "actual" workshop; here, we take a simple vanilla JS app and integrate Firebase. Similar to the React videos, the workshop is broken up into small chunks!
 
-0. [Setting up Firestore and the Firebase Console](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#setting-up-firestore-and-the-firebase-console)
-1. [Basic Data Operatins (CRUD) in Firestore](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#basic-data-operations-crud-in-firestore):
-    * [Creating Sample Data](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#creating-sample-data) and [Reading it](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#basic-read-operations)
-    * Programatically [Creating](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#creating-data-programatically), [Deleting](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#deleting-data), and [Updating](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#updating-data) Data
-2. [Cool Tricks with Firestore](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#cool-tricks-with-firestore-listeners-transactions-querying)
-    * [Listeners](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#listeners)
-    * [Batched Writes](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#batched-writes)
-    * [Querying](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/main-workshop#querying)
+0. [Setting up Firestore and the Firebase Console](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop#setting-up-firestore-and-the-firebase-console)
+1. [Basic Data Operatins (CRUD) in Firestore](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop#basic-data-operations-crud-in-firestore):
+    * [Creating Sample Data](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop#creating-sample-data) and [Reading it](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop#basic-read-operations)
+    * Programatically [Creating](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop#creating-data-programatically), [Deleting](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop#deleting-data), and [Updating](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop#updating-data) Data
+2. [Cool Tricks with Firestore](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop#cool-tricks-with-firestore-listeners-transactions-querying)
+    * [Listeners](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop#listeners)
+    * [Batched Writes](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop#batched-writes)
+    * [Querying](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/main-workshop#querying)
 
 [Here's the YouTube playlist for the videos in order, for your convenience](https://www.youtube.com/playlist?list=PLPO7_kXilXFb0_hrPKxlx-UEhZHiiTEWY).
 
 And an extra goodie:
 
-* [Using Firestore with React: the `useEffect` hook](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/firebase/with-react)
+* [Using Firestore with React: the `useEffect` hook](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/firebase/with-react)
 
 ### Education Track
 
-I did the video intro for the education track! You [watch the video](https://www.youtube.com/watch?v=KhtwVRjKosg) or read [a rough outline of my script](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/education-track).
+I did the video intro for the education track! You [watch the video](https://www.youtube.com/watch?v=KhtwVRjKosg) or read [a rough outline of my script](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/education-track).
 
 ## FAQs
 
@@ -118,17 +118,17 @@ If you've got questions about these things, or more broadly anything related to 
 
 [Matt](https://matthewwang.me) has taught a few variants of these workshops before; past iterations include:
 
-* [QWER Hacks 2020's Intro to Web Dev with React and Firebase](https://github.com/malsf21/qwerhacks-web-dev-workshop)
+* [QWER Hacks 2020's Intro to Web Dev with React and Firebase](https://github.com/mattxwang/qwerhacks-web-dev-workshop)
 * [Learning Lab Crash Course: Intro to React](https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/07-intro-react)
 * [Learning Lab Crash Course: Intermediate React](https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/09-intermediate-react-1)
 * [Learning Lab Crash Course: React Hooks](https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/11-react-hooks)
 * [Learning Lab Crash Course: Misc DevOps](https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/14-misc-devops)
 * [Learning Lab Crash Course: Intro to Firebase](https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/18-firebase)
 
-He'd also like to thank ACM Hack for Hackschool, which covers many intro to web development topics; he borrowed the BTS Twitter photos used in "[Should I use React in my hackathon project?](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/should-i-use-react)" from their [Hackschool 2020, Intro to React Workshop](https://github.com/uclaacm/hackschool-f20/tree/main/session-7-intro-react).
+He'd also like to thank ACM Hack for Hackschool, which covers many intro to web development topics; he borrowed the BTS Twitter photos used in "[Should I use React in my hackathon project?](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/should-i-use-react)" from their [Hackschool 2020, Intro to React Workshop](https://github.com/uclaacm/hackschool-f20/tree/main/session-7-intro-react).
 
 ## Licensing
 
-The contents of this repository are dual-licensed under the [MIT License](https://github.com/malsf21/qwerhacks-21-workshops/blob/main/LICENSE) and the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/); feel free to use whichever license suits your purpose better.
+The contents of this repository are dual-licensed under the [MIT License](https://github.com/mattxwang/qwerhacks-21-workshops/blob/main/LICENSE) and the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/); feel free to use whichever license suits your purpose better.
 
 I'd love to hear if you found this helpful, or if you have any suggestions! Please send me an email at [matt@matthewwang.me](mailto:matt@matthewwang.me).

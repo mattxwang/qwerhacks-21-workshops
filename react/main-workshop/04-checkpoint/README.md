@@ -1,6 +1,6 @@
 # Workshop Checkpoint 4
 
-At this point, you should have finished the ["Forms (and passing down functions)"](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#forms-and-passing-down-functions) subsection of ["Common React Patterns"](https://github.com/malsf21/qwerhacks-21-workshops/tree/main/react/main-workshop#common-react-patterns-lists-forms-and-conditional-rendering) in the workshop.
+At this point, you should have finished the ["Forms (and passing down functions)"](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/main-workshop#forms-and-passing-down-functions) subsection of ["Common React Patterns"](https://github.com/mattxwang/qwerhacks-21-workshops/tree/main/react/main-workshop#common-react-patterns-lists-forms-and-conditional-rendering) in the workshop.
 
 ## Edited Files
 
